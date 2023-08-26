@@ -1,0 +1,11 @@
+NIFEST
+.DS_Store
+_book
+dist
+node_modules
+package-lock.json
+.idea
+.swp
+example_en.pdf
+example_ja.pdf
+.mermaid_*
