@@ -1,8 +1,20 @@
 {
+  "name": "new-architecture-document-for-nexus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "honkit": "^4.0.7"
+  },
   "dependencies": {
     "gitbook-plugin-katex-pro": "^0.16.3",
     "gitbook-plugin-mermaid-newface": "^4.1.0",
-    "gitbook-plugin-uml": "^1.2.21",
-    "honkit": "^4.0.7"
+    "gitbook-plugin-uml": "^1.2.21"
   }
 }
