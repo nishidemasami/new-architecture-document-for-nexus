@@ -23,6 +23,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: "18"
+
     - name: mv
       run: mv /workspaces/honkit/* /__w/new-architecture-document-for-nexus/new-architecture-document-for-nexus
 
