@@ -1,3 +1,3 @@
 # 目次
 
-* [test](test.md)
+* [test](markdown/test.md)
