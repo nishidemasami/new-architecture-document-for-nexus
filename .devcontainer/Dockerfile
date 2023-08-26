@@ -1,1 +1,0 @@
-FROM ghcr.io/nishidemasami/markdown-docs:v1.1.13
