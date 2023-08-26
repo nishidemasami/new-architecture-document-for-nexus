@@ -2,10 +2,12 @@
     "publisher": "",
     "root": "./",
     "plugins": [
-        "-intopic-toc",
-        "katex-pro",
-        "uml",
-        "mermaid-newface"
+      "-intopic-toc",
+      "-sharing",
+      "katex-pro",
+      "uml",
+      "mermaid-newface",
+      "hide-published-with"
     ],
     "pdf" :{
       "pageNumbers": false,
