@@ -1,0 +1,72 @@
+name: Build Markdown Docs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: /__w/honkit-test/honkit-test
+    container:
+      image: ghcr.io/nishidemasami/markdown-docs:v1.1.13
+    timeout-minutes: 30
+
+    steps:
+    - name: pwd
+      run: pwd
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: mv
+      run: mv /workspaces/honkit/* /__w/honkit-test/honkit-test
+
+    - name: cd /__w/honkit-test/honkit-test
+      run: cd /__w/honkit-test/honkit-test
+
+    - name: pwd
+      run: pwd
+
+    - name: npm -v
+      run: npm -v
+
+    - name: node -v
+      run: node -v
+
+    - name: Build docs
+      run: npx honkit build
+      env:
+        CHROMIUM_FLAGS: --no-sandbox
+        PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
+
+    - name: Push to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: _book/
+
+    - name: Generate PDF
+      run: npx honkit pdf ./ ./markdown-docs.pdf
+      env:
+        CHROMIUM_FLAGS: --no-sandbox
+        PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v3
+      with:
+        name: documents
+        path: ./markdown-docs.pdf
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        name: pdf
+        tag_name: pdf_relrase
+        generate_release_notes: true
+        files: ./markdown-docs.pdf

@@ -1,0 +1,21 @@
+{
+    "publisher": "",
+    "root": "./",
+    "plugins": [
+        "-intopic-toc",
+        "katex-pro",
+        "uml",
+        "mermaid-newface"
+    ],
+    "pdf" :{
+      "pageNumbers": false,
+      "margin": {
+        "right": 40,
+        "left": 40 
+      }
+    },
+    "uml": {
+      "charset" : "UTF-8"
+    },
+    "language": "ja"
+}
