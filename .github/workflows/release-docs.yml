@@ -1,4 +1,4 @@
-name: Build Markdown Docs
+name: build and release docs
 
 on:
   push:
