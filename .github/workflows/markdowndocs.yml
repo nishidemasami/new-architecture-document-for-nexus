@@ -9,17 +9,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: /__w/new-architecture-document-for-nexus/new-architecture-document-for-nexus
-    container:
-      image: ghcr.io/nishidemasami/markdown-docs:v1.1.13
     timeout-minutes: 30
 
     steps:
-    - name: pwd
-      run: pwd
-
     - name: Checkout
       uses: actions/checkout@v3
 
@@ -28,26 +20,17 @@ jobs:
       with:
         node-version: "18"
 
-    - name: mv
-      run: mv /workspaces/honkit/* /__w/new-architecture-document-for-nexus/new-architecture-document-for-nexus
-
-    - name: cd /__w/new-architecture-document-for-nexus/new-architecture-document-for-nexus
-      run: cd /__w/new-architecture-document-for-nexus/new-architecture-document-for-nexus
-
-    - name: npm -v
-      run: npm -v
-
-    - name: node -v
-      run: node -v
-
     - name: Install dependencies
       run: npm install
 
+    - name: Install Calibre
+      run: |
+        sudo -v
+        sudo apt-get update -y && sudo apt-get install -y xdg-utils libegl1 libopengl0 fonts-noto graphviz fonts-noto-cjk qtbase5-dev libssl-dev libxcursor-dev libxcomposite-dev libxdamage-dev libxrandr-dev libfontconfig1-dev libxss-dev libwebp-dev libjsoncpp-dev libopus-dev libminizip-dev libavutil-dev libavformat-dev libavcodec-dev libevent-dev libvpx-dev libsnappy-dev libre2-dev libprotobuf-dev protobuf-compiler
+        wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+
     - name: Build docs
       run: npx honkit build
-      env:
-        CHROMIUM_FLAGS: --no-sandbox
-        PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
 
     - name: Push to gh-pages
       uses: peaceiris/actions-gh-pages@v3
@@ -58,9 +41,6 @@ jobs:
 
     - name: Generate PDF
       run: npx honkit pdf ./ ./new-architecture-document-for-nexus.pdf
-      env:
-        CHROMIUM_FLAGS: --no-sandbox
-        PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
 
     - name: Upload PDF
       uses: actions/upload-artifact@v3
