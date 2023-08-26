@@ -4,7 +4,6 @@
     "plugins": [
       "-intopic-toc",
       "-sharing",
-      "katex-pro",
       "uml",
       "mermaid-newface",
       "hide-published-with"
