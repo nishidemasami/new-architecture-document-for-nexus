@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /__w/honkit-test/honkit-test
+        working-directory: /__w/new-architecture-document-for-nexus/new-architecture-document-for-nexus
     container:
       image: ghcr.io/nishidemasami/markdown-docs:v1.1.13
     timeout-minutes: 30
@@ -24,10 +24,10 @@ jobs:
       uses: actions/checkout@v3
 
     - name: mv
-      run: mv /workspaces/honkit/* /__w/honkit-test/honkit-test
+      run: mv /workspaces/honkit/* /__w/new-architecture-document-for-nexus/new-architecture-document-for-nexus
 
-    - name: cd /__w/honkit-test/honkit-test
-      run: cd /__w/honkit-test/honkit-test
+    - name: cd /__w/new-architecture-document-for-nexus/new-architecture-document-for-nexus
+      run: cd /__w/new-architecture-document-for-nexus/new-architecture-document-for-nexus
 
     - name: pwd
       run: pwd
