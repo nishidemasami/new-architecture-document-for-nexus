@@ -1,3 +1,7 @@
 # 目次
 
-* [test](markdown/test.md)
+* [はじめに](README.md)
+
+* [テスト](markdown/test.md)
+
+* [PlantUMLテスト](markdown/plantumltest.md)
