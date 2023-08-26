@@ -1,4 +1,4 @@
-# ‚æ‚è‚æ‚¢ƒVƒXƒeƒ€ŠJ”­‚Ìèˆø‚«
+# ã‚ˆã‚Šã‚ˆã„ã‚·ã‚¹ãƒ†ãƒ é–‹ç™ºã®æ‰‹å¼•ã
 
-HTML”Å https://nishidemasami.github.io/new-architecture-document-for-nexus/
-PDF”Å https://github.com/nishidemasami/new-architecture-document-for-nexus/releases/download/pdf_relrase/new-architecture-document-for-nexus.pdf
+- HTMLç‰ˆ https://nishidemasami.github.io/new-architecture-document-for-nexus/  
+- PDFç‰ˆ https://github.com/nishidemasami/new-architecture-document-for-nexus/releases/download/pdf_relrase/new-architecture-document-for-nexus.pdf  
