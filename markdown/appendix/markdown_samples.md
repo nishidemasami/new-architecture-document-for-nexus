@@ -102,44 +102,6 @@
 >> 
 >> あの新機能バグってるっすね
 
-## pre記法(スペース4 or タブ)
-
-半角スペース4個もしくはタブで、コードブロックをpre表示できます
-
-### 記述例
-~~~md
-	# Tab
-	class Hoge
-		def hoge
-			print 'hoge'
-		end
-	end
-
----
-
-    # Space
-    class Hoge
-      def hoge
-        print 'hoge'
-      end
-    end
-~~~
-
-### 表示例
-	class Hoge
-		def hoge
-			print 'hoge'
-		end
-	end
-
----
-
-    class Hoge
-      def hoge
-        print 'hoge'
-      end
-    end
-
 ## code記法
 バッククォートで文字列を囲むことでコードの一部を表示可能です。
 
@@ -318,32 +280,6 @@ class Hoge
 end
 ```
 
-## GFM:pre記法(シンタックスハイライト)
-
-チルダ、もしくはバッククォート3つの後ろに対象シンタックスの言語名を記述します。
-
-### 記述例
-
-```md
-　~~~ruby
-　class Hoge
-　  def hoge
-　    print 'hoge'
-　  end
-　end
-　~~~
-```
-
-### 表示例
-
-~~~ruby
-class Hoge
-  def hoge
-    print 'hoge'
-  end
-end
-~~~
-
 ## GFM:表組み
 
 ### 記述例
@@ -358,37 +294,6 @@ end
 |:--|--:|:--:|
 |align left|align right|align center|
 |a|b|c|
-
-## GFM:ページ内リンク
-GitHubのMarkdownを利用すると、見出し記法を利用した際に
-アンカーが自動的に作成されます。
-そのアンカーを利用したページ内リンクを簡単に作成できます。
-
-~~~md
-## menu
-* [to header1](#header1)
-* [to header2](#header2)
-
-<!-- some long code -->
-
-[return to menu](#menu)
-### header1
-### header2
-~~~
-
-少し省略してますが、こんなかんじのHTMLになります。
-
-~~~html
-<h2><a name="user-content-menu" href="#menu">menu</a></h2>
-<a href="#header1">to header1</a>
-<a href="#header2">to header2</a>
-
-<!-- some long code -->
-
-<a href="#menu">to menu</a>
-<h3><a name="user-content-header1" href="#header1">header1</a></h3>
-<h3><a name="user-content-header2" href="#header2">header2</a></h3>
-~~~
 
 ## 出典
 [Markdown記法 サンプル集](https://qiita.com/tbpgr/items/989c6badefff69377da7)より引用
