@@ -1,0 +1,731 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <title>利用者が増えても自動でスケールするシステムの開発手法 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.8">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    よりよいシステム開発の手引き
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="how_to_develop.html">
+            
+                <a href="how_to_develop.html">
+            
+                    
+                    AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="how_to_management_documents.html">
+            
+                <a href="how_to_management_documents.html">
+            
+                    
+                    生産性が高く修正の追跡が可能な仕様書管理手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="how_to_define_requirements.html">
+            
+                <a href="how_to_define_requirements.html">
+            
+                    
+                    現代的な要件定義の手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    保守性が高くセキュリティが高いシステム開発の手法
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="how_to_management_aws_services.html">
+            
+                <a href="how_to_management_aws_services.html">
+            
+                    
+                    利用者が増えても自動でスケールするシステムの開発手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    実践
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    付録：使用ソフトウェア・ライブラリ・サービス一覧
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="appendix/mermaid_samples.html">
+            
+                <a href="appendix/mermaid_samples.html">
+            
+                    
+                    付録：Mermaid記法 サンプル集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="appendix/plantuml_samples.html">
+            
+                <a href="appendix/plantuml_samples.html">
+            
+                    
+                    付録：PlantUML記法 サンプル集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="appendix/markdown_samples.html">
+            
+                <a href="appendix/markdown_samples.html">
+            
+                    
+                    付録：Markdown記法 サンプル集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >利用者が増えても自動でスケールするシステムの開発手法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="利用者が増えても自動でスケールするシステムの開発手法">利用者が増えても自動でスケールするシステムの開発手法</h1>
+<p>AWSを十分に活用すれば、自動でAWSの以下の恩恵に預かることができます。</p>
+<ul>
+<li>アクセス数が多くても自動でスケールアウトしてすることができる。</li>
+<li>アクセス数が少ない場合、自動でスケールインするようにできる。利用がない時は課金額をゼロに近くできる。</li>
+<li>アップデートが自動で安全に適用される。</li>
+<li>セキュリティが高いシステムが低コストで構築できる。</li>
+<li>ユーザーにストレスの無い、快適に動作するシステムが低コストで開発できる。</li>
+<li>システムダウンの少ない可用性の高いシステムを低コストで運用できる。</li>
+</ul>
+<p>そのためには原則、以下の通りにします。</p>
+<ul>
+<li>EC2でWEBアプリケーションを稼働させるべきではない。WEBアプリケーションはLambdaで稼働させる。</li>
+<li>DBはDynamoDBで稼働させる。</li>
+<li>ファイルはS3に保存する。</li>
+<li>フロントエンドはNext.jsで開発しCloudFrontとS3で公開する。</li>
+<li>認証にはCognitoを使用する。</li>
+<li>データの送受信はAppSyncで構築する。</li>
+</ul>
+<h2 id="アーキテクチャの例">アーキテクチャの例</h2>
+<p>アーキテクチャの例は以下の通りです。</p>
+<p><?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="651px" preserveAspectRatio="none" style="width:422px;height:651px;background:#000000;" version="1.1" viewBox="0 0 422 651" width="422px" zoomAndPan="magnify"><defs/><g><rect fill="#150D1B" height="1" style="stroke:#150D1B;stroke-width:1.0;" width="1" x="0" y="0"/><text fill="#33FF02" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="135" x="5" y="17">PlantUML 1.2022.14</text><text fill="#33FF02" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="4" x="5" y="30.9688"> </text><text fill="#33FF02" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="399" x="5" y="44.9375">&lt;b&gt;This version of PlantUML is 263 days old, so you should</text><text fill="#33FF02" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="408" x="5" y="58.9063">&lt;b&gt;consider upgrading from https://plantuml.com/download</text><rect fill="#33FF02" height="21.2969" style="stroke:#33FF02;stroke-width:1.0;" width="338" x="5" y="68.875"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="168" x="6" y="83.875">[From string (line 5) ]</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="5" x="5" y="104.1719"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="79" x="5" y="120.4688">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="215" x="5" y="136.7656">skinparam shadowing false</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="82" x="5" y="153.0625">hide circle</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="5" x="5" y="169.3594"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="308" x="5" y="185.6563">skinparam noteBackgroundColor White</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="264" x="5" y="201.9531">skinparam noteBorderColor Black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="5" x="5" y="218.25"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="338" x="5" y="234.5469">skinparam packageBackgroundColor White</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="294" x="5" y="250.8438">skinparam packageBorderColor Black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="277" x="5" y="267.1406">skinparam classAttributeIconSize 0</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="141" x="5" y="283.4375">skinparam class {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="186" x="15" y="299.7344">BackgroundColor White</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="137" x="15" y="316.0313">ArrowColor Black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="142" x="15" y="332.3281">BorderColor Black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="10" x="5" y="348.625">}</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="5" x="5" y="364.9219"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="179" x="5" y="381.2188">skinparam sequence {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="137" x="15" y="397.5156">ArrowColor Black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="226" x="15" y="413.8125">ParticipantBorderColor Black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="270" x="15" y="430.1094">ParticipantBackgroundColor White</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="204" x="15" y="446.4063">LifeLineBorderColor Black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="10" x="5" y="462.7031">}</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="5" x="5" y="479"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="167" x="5" y="495.2969">skinparam usecase {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="186" x="15" y="511.5938">BackgroundColor White</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="137" x="15" y="527.8906">ArrowColor Black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="142" x="15" y="544.1875">BorderColor Black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="10" x="5" y="560.4844">}</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="5" x="5" y="576.7813"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="258" x="5" y="593.0781">!define AWS_BG_COLOR #FFFFFF</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="5" x="5" y="609.375"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" text-decoration="wavy underline" textLength="300" x="5" y="625.6719">!include ../plantuml/AWS_IMAGES.puml</text><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="353" x="10" y="641.9688">cannot include ../plantuml/AWS_IMAGES.puml</text><!--SRC=[hLB9JW914BttLvGtEJ0i4cFcngO1XqX4uMZQdW8gDjLZBn0r_hkDH471SF5OzLwzUhMu9-92Mha0DvUvMH7FO2grGp6d746HLHg5SDyqDXvRKZtDh0cSjuqs5YPpylYROsoETeEtT2pO5IbYB6T7TRveUr9RYjBIkQRtbXw3nvuoFA9NXEfl2hm9WCFz09hMcjMkVgJkzNpV7S3XSq1M-2bxe7mehIT5XMI_h_GJ_iDJHbFCYF68aU1GIOV_Cfuu8LOwnBCdIQNGqLnOw4fpCdhe3PfNtL5In5Y8uHgv7sImHEl8CDIIUhLUJsgDqxk0q445rNEeNQJrHbexW_kxDgpnaZYz6cRWJB1nRpcvpSsYG4dqvLB2RM1F2qpXfa3kTww_4j3b9Ld32sGl-kF1bd3UABV8mmXjj0BZWUZWL0RjOuKoUNpbD7Q_B5-8JF8in4zA0LcquuQyVKc1WzOV]--></g></svg></p>
+<h2 id="なぜec2でwebアプリケーションを稼働させるべきではないか">なぜEC2でWEBアプリケーションを稼働させるべきではないか</h2>
+<p>以下の理由から、EC2でWEBアプリケーションを稼働させるべきではありません。</p>
+<ul>
+<li>EC2の本番環境にどんどん手が加えられ、いわゆる「秘伝のタレ」化してしまい、トラブルが発生した時に本番環境を新たに再構築できない事態が発生しうる</li>
+<li>アクセス数の予測が難しい場合、また、時間や曜日、月末月初などでアクセス数に増減がある場合でも、アクセス数が最も多い瞬間に合わせてインスタンスの性能を決定しなければならないため、コストが高い。</li>
+<li>EC2のSLAは非常に低く、よく落ちる</li>
+<li>EC2は非常に高価である</li>
+<li>EC2は自動ではスケールアップもスケールアウトもされず、急に大量のアクセスが来た場合に対応できない。また、スケールダウンもスケールインも自動ではされないため、たとえ1件もアクセスが来なくても同じ額が課金されてしまう。</li>
+<li>新規開発システムをEC2でWEBアプリケーションを稼働させるメリットが無い。既存システムを利用するためであっても、EC2を利用するのではなくさくらインターネットの「さくらのVPS」やNTTの「WebARENA Indigo」などのサービスを利用したほうが運用コストが低くシステムの停止も少なくサービス品質も高い。</li>
+</ul>
+<p>極力WEBアプリケーションはLambdaで稼働させるべきです。WEBアプリケーションをEC2ではなくLambdaで稼働させるメリットは以下の通りです。</p>
+<ul>
+<li>EC2ではアクセスが無い時でも課金されるが、Lambdaであれば課金はアクセスに応じてのミリ秒単位であるため、運用コストが抑えられる(極端な話、アクセスが0件であれば課金されない)</li>
+<li>EC2ではセキュリティアップデートは自己責任でシステムを停止させて実施しなければならないが、Lambdaであればセキュリティアップデートが自動で安全に実施されシステム停止も発生しない</li>
+<li>EC2ではアクセスに応じてスケールアップ・スケールアウトさせるのが難しいが、Lambdaでは自動でスケールするため、急な大量のアクセスにも柔軟に対応できる</li>
+<li>EC2はSLAが99.5%(最大月間3.6時間も、サービスが落ちていることを許容する計算になる)しかないが、LambdaはSLAが99.95%(最大でも月間21.6分しかサービスが落ちていることを許容しない計算になる)であるため品質が高い</li>
+</ul>
+<h1 id="awsの各サービスの使い方">AWSの各サービスの使い方</h1>
+<h2 id="aws-lambda">AWS Lambda</h2>
+<p>AWSの最も先進的かつ便利なサービスのうちの1つです。</p>
+<p>以下のメリットがあります。</p>
+<ul>
+<li>課金がミリ秒単位であるため、運用コストが抑えられる(極端な話、アクセスが0件であれば課金されない)</li>
+<li>SLAが99.95%と、非常に高い稼働率が期待できる。</li>
+<li>様々なプログラミング言語に対応しており、処理の目的に応じてプログラミング言語を使い分けることができる。</li>
+<li>コールドスタートが非常に高速で、EC2では対応できないような場面にも対処できる。<ul>
+<li>Javaの場合普通に使用するとコールドスタートは遅いが、その場合でもGraalVMを利用すればコールドスタートも高速になる。</li>
+</ul>
+</li>
+<li>自動でスケールアウトするため、</li>
+</ul>
+<h2 id="amazon-cognito">Amazon Cognito</h2>
+<p>ユーザーの認証を管理するサービスです。
+現代のWEBサービスに必要な</p>
+<ul>
+<li>ユーザー登録</li>
+<li>メール・電話番号認証</li>
+<li>クッキー管理</li>
+<li>SNS認証
+などの機能を一通り備えています。</li>
+</ul>
+<p>一般的なWEBサービスで必要とされる機能をほぼ網羅しており、ほとんどのユースケースで必要十分な機能を備えています。</p>
+<h2 id="amazon-s3">Amazon S3</h2>
+<p>ファイルを保存するストレージです。
+非常に様々な用途が想定されていて、たとえば以下のようなこともできます。</p>
+<ul>
+<li>インターネットへ公開するファイルを保存する。</li>
+<li>ユーザーから保存を受け付けるがユーザーへの公開はしない、書き込み専用読み込み不可ストレージ。</li>
+<li>AppSyncやLambdaから、ファイル名を主キーとしたデータソースとして利用する</li>
+</ul>
+<h2 id="amazon-cloudfront">Amazon CloudFront</h2>
+<p>全世界に分散して配置されているCDNです。
+世界中のどこからアクセスしても速く、S3に用意されたファイルをWEBで配信するのに便利です。</p>
+<h2 id="amazon-dynamodb">Amazon DynamoDB</h2>
+<h2 id="amazon-aurora-serverless-v2">Amazon Aurora Serverless v2</h2>
+<p>DynamoDBが使えない領域での第二の選択肢です。
+最小構成で、一切利用が無い場合でも北米リージョンで$43.2、東京リージョンで$72のコストがかかる。(当然ながら、DynamoDBでは保存データ料金を除いて無料である。)</p>
+<h2 id="amazon-rds">Amazon RDS</h2>
+<h2 id="aws-appsync">AWS AppSync</h2>
+<h2 id="amazon-sqs">Amazon SQS</h2>
+<h2 id="amazon-ses">Amazon SES</h2>
+<h2 id="amazon-ec2">Amazon EC2</h2>
+<p>EC2は非常に高価ですが、「スポットインスタンス」というインスタンスがあり、これがどういうものかというと「空いている時間に利用できる、料金が非常に安いインスタンス」です。
+夜間バッチなどのバッチ処理などに利用すると非常に安価にデータ処理がおこなえます。</p>
+<h2 id="amazon-ecs・amazon-eks">Amazon ECS・Amazon EKS</h2>
+<p>Dockerコンテナを立ち上げるためのサービスがAmazon ECSやAmazon EKSです。Kubernetesによる運用が必要な場合はEKSを使用しますが、多くの場合はECSで十分です。</p>
+<p>KubernetesをAWS上で運用できるサービスです。EKSは料金面ではGoogle CloudのGKE(Google Kubernetes Engine)よりも割高で、Kubernetesが必要な場合にはGKEの利用をおすすめします。</p>
+<p>起動に時間がかかる（数分）ので、オンライン処理には通常は利用できません。バッチ処理などで利用します。</p>
+<p>Amazon ECSは以下などを使用してコンテナを立ち上げます。</p>
+<ul>
+<li>AWS Fargate</li>
+<li>AWS EC2</li>
+<li>Amazon ECS on AWS Outposts
+などを使用します。</li>
+</ul>
+<h3 id="aws-fargate">AWS Fargate</h3>
+<p>EC2よりは管理する項目が少なく、Lambdaよりは自由度が高い、EC2とLambdaの中間のような存在がFargateです。新規開発ならばLambdaのメリットが圧倒的に強いので見劣りしがちですが、高負荷処理や時間のかかる処理、同時実行数が多い処理などのLambdaでは対応できないようなユースケースではFargateが必要になります。</p>
+<h3 id="aws-ec2">AWS EC2</h3>
+<p>スポットインスタンスを使用するならば安価に処理することができます。</p>
+<h3 id="amazon-ecs-on-aws-outposts">Amazon ECS on AWS Outposts</h3>
+<p>オンプレで処理する方法です。これは自社データセンターを持っているような会社が使うものなのでここでは説明を割愛します。</p>
+<h1 id="awsを使用したwebアプリケーションの開発方法">AWSを使用したWEBアプリケーションの開発方法</h1>
+<p>どうやってAWSを使用したWEBアプリケーションの開発をおこなってゆけばよいかを説明します。</p>
+<p>とは言っても、当然ながらAWSでどうやってWEBアプリケーションを開発してゆけばよいのかは公式ドキュメントによくまとまっているため、ここでは引用に留めます。</p>
+<h2 id="使用するアーキテクチャ">使用するアーキテクチャ</h2>
+<h3 id="サーバーレスアーキテクチャ">サーバーレスアーキテクチャ</h3>
+<h2 id="使用する手法">使用する手法</h2>
+<h3 id="cicd">CI/CD</h3>
+<h2 id="使用する言語">使用する言語</h2>
+<h3 id="プログラミング言語">プログラミング言語</h3>
+<p>実装に使用するプログラミング言語は、主にTypeScript、Go、およびRustを使用します。
+これらの選定理由は以下の通りです。</p>
+<ul>
+<li>静的型付けにより、プログラムの正しさの検証が容易になる。</li>
+<li>メジャーな言語であるため困ったときにネット上にも書籍上にも資料がたくさん見つけられる。</li>
+</ul>
+<h4 id="typescript">TypeScript</h4>
+<h4 id="go">Go</h4>
+<h4 id="rust">Rust</h4>
+<h3 id="idlインタフェース記述言語">IDL(インタフェース記述言語)</h3>
+<p>インタフェースの記述に使用するIDLは、主にProtocol Buffers、GraphQLを使用します。</p>
+<h4 id="protocol-buffers">Protocol Buffers</h4>
+<h4 id="graphql">GraphQL</h4>
+<h2 id="使用する技術">使用する技術</h2>
+<h3 id="knative">Knative</h3>
+<h3 id="docker">Docker</h3>
+<p>AWS Fargate</p>
+<h2 id="serverless-framework">Serverless Framework</h2>
+<h2 id="reactjs・nextjs">React.js・Next.js</h2>
+<h1 id="sla">SLA</h1>
+<h2 id="各サービスのsla一覧">各サービスのSLA一覧</h2>
+<table>
+<thead>
+<tr>
+<th>サービス名</th>
+<th>SLA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amazon EC2</td>
+<td>99.5%</td>
+</tr>
+<tr>
+<td>Amazon Elastic Kubernetes Service (Amazon EKS)</td>
+<td>99.95%</td>
+</tr>
+<tr>
+<td>Amazon S3</td>
+<td>99.9%</td>
+</tr>
+<tr>
+<td>Amazon CloudFront</td>
+<td>99.9%</td>
+</tr>
+<tr>
+<td>Amazon Cognito</td>
+<td>99.9%</td>
+</tr>
+<tr>
+<td>AWS Lambda</td>
+<td>99.95%</td>
+</tr>
+<tr>
+<td>AWS AppSync</td>
+<td>99.95%</td>
+</tr>
+<tr>
+<td>Amazon DynamoDB</td>
+<td>99.999% ※1リージョンの場合は99.99%</td>
+</tr>
+<tr>
+<td>Amazon Route 53</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="月間ダウンタイム早見表1ヵ月を2592000秒として計算">月間ダウンタイム早見表(1ヵ月を2592000秒として計算)</h2>
+<table>
+<thead>
+<tr>
+<th>SLA</th>
+<th>ダウンタイム(秒)</th>
+<th>ダウンタイム(分)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>99.5%</td>
+<td>12960</td>
+<td>216</td>
+</tr>
+<tr>
+<td>99.9%</td>
+<td>2592</td>
+<td>43.2</td>
+</tr>
+<tr>
+<td>99.95%</td>
+<td>1296</td>
+<td>21.6</td>
+</tr>
+<tr>
+<td>99.99%</td>
+<td>259.2</td>
+<td>4.32</td>
+</tr>
+</tbody>
+</table>
+<h1 id="用語集">用語集</h1>
+<h2 id="リージョン">リージョン</h2>
+<p>AWSのデータセンター単位。
+世界中にある。日本にも東京と大阪の2つある。</p>
+<p>各種料金が北部バージニアリージョンは一番安い。
+リージョン間をまたぐ通信にはまた別に料金が発生する。</p>
+<h2 id="vpc">VPC</h2>
+<p>Virtual Private Cloudの略。ローカルネットワークみたいなもの。
+特にRDSは通常のケースではインターネットに公開しないのでVPC内で完結する設計にする。
+※要注意ポイント：VPCはAZをまたぐことができる。VPC内の通信だからと油断して料金が発生する通信が大量に発生するような設計をしてしまわないように注意。
+なお、VPCをまたぐ通信はVGWを作成しないといけないが、今回はVPC間通信は使わないためVGWの説明は省略する。</p>
+<h2 id="サブネット">サブネット</h2>
+<p>VPCの中にある小さなネットワークのこと。
+サブネットはAZをまたげない。</p>
+<h2 id="サブネットグループ">サブネットグループ</h2>
+<p>サブネットのグループのこと。
+サブネットグループは複数のAZにまたがっていることが必須となっている。</p>
+<h2 id="セキュリティグループ">セキュリティグループ</h2>
+<p>ファイアウォールルールのセット。
+ちなみにKUSANAGIのデフォルトのセキュリティグループはポート22・80・443を通す設定になっている。</p>
+<h2 id="ami">AMI</h2>
+<p>アマゾンマシンイメージの略。
+EC2のOSのテンプレート。全自動でEC2のインスタンスが利用可能な状態までできあがるので便利。
+その用途に応じたセキュリティグループも用意してくれる。</p>
+<h2 id="ec2">EC2</h2>
+<p>仮想マシンみたいなもの。
+基本的にAMIから作ります。
+もしAMIから作らない場合、いわゆる「秘伝のタレ」化してしまい二度と同じものを作ることができなくなり、障害が起きた時にサービスを継続できない状況にすらなりうるので、必ずAMIから作り、サーバー構築も自動化かつコード化(Infrastructure as Code)します。</p>
+<h2 id="infrastructure-as-code">Infrastructure as Code</h2>
+<p>サーバー構築をコード化することです。
+以下のメリットがあります。</p>
+<ul>
+<li>開発環境が開発者間で差異がなくなり、「この人の開発環境でだけ動かない」みたいなことがなくなる</li>
+<li>開発環境とテスト環境、また、テスト環境と本番環境の差異が文字ベースでわかるようになり、障害対応がスムーズになる</li>
+</ul>
+<h2 id="route53">Route53</h2>
+<p>AWSのDNSサーバ。ドメイン取得もRoute53でできる。
+普通に使うとただのDNSサーバだが、AWSのいくつかのサービス(CloudFront、Elastic
+Beanstalk（いくつか制約があるが）、ELB、S3)に対してAレコードをCNAMEレコードみたいな便利な使い方をすることができます。また、Route53はDNSフェイルオーバーによりリージョン障害だけでなくAWS全体の障害にも対応できるが、長くなるので説明は省略します。
+今回はRoute53でAレコードをCloudFrontに紐付ける。これを使いたいためにRoute53以外の選択肢が無くなっている。</p>
+<h2 id="elb">ELB</h2>
+<p>EC2のロードバランサー。Elastic Load Balancingの略。
+ALBとNLBとCLBがある。
+昔は一つしかなかったが、あとからALBとNLBができたので従来のELBがCLB(クラシックロードバランサー)となった。
+ネット上にはCLBをELBと言ってる記事があるので注意が必要。
+ALBがL7ロードバランサー、NLBがL4ロードバランサー、CLBがL4/L7ロードバランサー。
+負荷分散のため、高可用性のためにELBで分散する時は複数AZに分散することになる。複数リージョンに分散するのはELBではできない。複数リージョン分散にはRoute53を使うが、設計が非常に煩雑。</p>
+<h2 id="alb">ALB</h2>
+<p>ELBの中で一番設定が柔軟にできる。
+ちなみに、必ず2つ以上のサブネットを選択する必要がある。（そのサブネットたちに処理を分散するため。）</p>
+<h2 id="acm">ACM</h2>
+<p>HTTPSの証明書を発行してくれる。
+外部で証明書を発行しても一応設定はできるものの、これで発行しないとCloudFrontとELBの設定がちょっと面倒。
+Route53で取得したドメインはACMで証明書発行が簡単にできる。</p>
+<h2 id="cloudfront">CloudFront</h2>
+<p>キャッシュサーバみたいなもの。
+CloudFrontの証明書は北部バージニアリージョンでないとダメらしいので今回は北部バージニアリージョンで作る。
+WordPressなので/wp-admin/はキャッシュしないように設定する。
+ちなみに、CloudFrontを通さないとAWSの通信量の請求が高くなる。</p>
+<h2 id="rds">RDS</h2>
+<p>EC2のデータベース特化版みたいなもの。
+ちなみにRDSにはサーバレスというのがあるが全然サーバレスじゃない。</p>
+<h2 id="エンドポイント">エンドポイント</h2>
+<p>各リソースにアクセスするためのURL。
+たとえば以下のようになる。
+vpce-1234-abcdev-us-east-1.vpce-svc-123345.us-east-1.vpce.amazonaws.com
+VPC エンドポイント ID、アベイラビリティーゾーン名、リージョン名などが含まれている。
+Route53にはCloudFrontのエンドポイントを、CloudFrontにはELBのエンドポイントを、それぞれ入力する。
+また、ブラウザからこのURLを入力すれば(直接見ることができる設定なら)直接見ることもできる。</p>
+<h2 id="sla">SLA</h2>
+<p>サービス品質保証(Service Level Agreement)の略。
+EC2はマルチAZの場合はSLA99.99%を保証しているが、SLA99.99%というのは年間で52.56分停止する計算になる。
+（ただし、RDSは99.95%、CloudFrontは99.9%、ELBはSLA99.99%がSLA。（すべてマルチAZでのSLA））
+また、シングルAZの場合はSLA90%を保証しているが、これは年間で876時間停止する計算になる。
+今回はテスト環境だったのでシングルAZで構築したが、本番環境はもうちょっとお金をかけてマルチAZで構築するようにする。(無料枠には当然収まらない。)
+AWS障害のニュースを耳にする機会が増えているが、他人事だと考えず、自分の使っているEC2に障害が起こることを前提として要件定義する(お客さんと、AWS障害をどの程度許容するのか要相談)。</p>
+<h2 id="az">AZ</h2>
+<p>アベイラビリティーゾーンの略。
+物理的に別の場所に位置していて、1つが災害にあって障害などが発生しても、もう1つは死なないようにすることなどもできる。(マルチAZ構成のこと)
+たとえば大阪リージョンの場合は大阪市西区や中央区などにばらけて存在している。
+ただし、AZ間をまたぐ通信にはだいたい料金が発生するため注意。</p>
+<h2 id="sla">SLA</h2>
+<h2 id="結果整合性">結果整合性</h2>
+<h1 id="開発の勘どころ">開発の勘どころ</h1>
+<h2 id="バッチ処理の実装">バッチ処理の実装</h2>
+<p>以下のような処理はバッチで実装することが多いと思います。</p>
+<ul>
+<li>日時通知</li>
+<li>案内メール送信</li>
+</ul>
+<h3 id="aws-lambda">AWS Lambda</h3>
+<h3 id="開発言語">開発言語</h3>
+<p>プログラミング言語は以下を使用します。</p>
+<ul>
+<li>TypeScript</li>
+<li>Go</li>
+<li>Rust</li>
+<li>Java(GraalVM)</li>
+</ul>
+<h3 id="フレームワーク">フレームワーク</h3>
+<p>プログラミング言語は以下を使用します。</p>
+<ul>
+<li>Serverless Framework</li>
+</ul>
+<h4 id="コールドスタートを避けようとしない">コールドスタートを避けようとしない</h4>
+<p>provisionedConcurrencyでは、指定した以上の接続が発生するとコールドスタートは避けられません。</p>
+<h1 id="非機能要件">非機能要件</h1>
+<h2 id="sla">SLA</h2>
+<h2 id="セキュリティ">セキュリティ</h2>
+<h2 id="アクセシビリティ対応">アクセシビリティ対応</h2>
+<h2 id> </h2>
+<h2 id> </h2>
+<h2 id> </h2>
+<h1 id="iso-27001を取得しているサービス">ISO 27001を取得しているサービス</h1>
+<p>実際のシステム開発では、AWSだけでなくLineやSlackなどの外部サービスを利用する必要があるケースもあります。</p>
+<p>たとえば運用では、運用者（従業員だけでなく、外部委託なども想定）の管理や、システムからの運用者への通知を管理する必要があります。</p>
+<p>運用で使用するためにLineやSlackを使用する場合、「ISO 27001を取得している」ことを以って提案すると通りやすいです。
+以下はISO 27001を取得しているサービスの一覧です。</p>
+<h2 id="aws">AWS</h2>
+<h2 id="gcp">GCP</h2>
+<h2 id="slack">Slack</h2>
+<h2 id="line">Line</h2>
+<h2 id="gitlab">GitLab</h2>
+<h1 id="クラウドは実績があるのか？">クラウドは実績があるのか？</h1>
+<p>クラウドを使用するために実績の例が必要であれば、以下が参考になるので確認してください。</p>
+<h2 id="aws">AWS</h2>
+<p>ソニー銀行</p>
+<h2 id="gcp">GCP</h2>
+<p>みんなの銀行：日本初の「デジタルバンク」として Google Cloud に勘定系を構築。Cloud Spanner で銀行基幹システムで求められる可用性を実現
+<a href="https://cloud.google.com/blog/ja/topics/customers/minna-no-ginko-spanner" target="_blank">https://cloud.google.com/blog/ja/topics/customers/minna-no-ginko-spanner</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"利用者が増えても自動でスケールするシステムの開発手法","level":"1.6","depth":1,"next":{"title":"実践","level":"1.7","depth":1,"ref":"","articles":[]},"previous":{"title":"保守性が高くセキュリティが高いシステム開発の手法","level":"1.5","depth":1,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/how_to_management_aws_services.md","mtime":"2023-08-27T13:33:03.109Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-08-27T13:34:54.903Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -56,7 +56,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="plantumltest.md" />
+    <link rel="next" href="how_to_management_documents.html" />
     
     
     <link rel="prev" href="../" />
@@ -114,9 +114,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="plantumltest.md">
+        <li class="chapter " data-level="1.3" data-path="how_to_management_documents.html">
             
-                <span>
+                <a href="how_to_management_documents.html">
             
                     
                     生産性が高く修正の追跡が可能な仕様書管理手法
@@ -127,33 +127,72 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="plantumltest.md">
+        <li class="chapter " data-level="1.4" data-path="how_to_define_requirements.html">
+            
+                <a href="how_to_define_requirements.html">
+            
+                    
+                    現代的な要件定義の手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
             
                 <span>
             
                     
                     保守性が高くセキュリティが高いシステム開発の手法
             
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="how_to_management_aws_services.html">
+            
+                <a href="how_to_management_aws_services.html">
+            
+                    
+                    利用者が増えても自動でスケールするシステムの開発手法
+            
                 </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="plantumltest.md">
+        <li class="chapter " data-level="1.7" >
             
                 <span>
             
                     
-                    利用者が増えても自動でスケールするシステムの開発、および運用手法
+                    実践
             
-                </a>
+                </span>
             
 
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="appendix/mermaid_samples.html">
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    付録：使用ソフトウェア・ライブラリ・サービス一覧
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="appendix/mermaid_samples.html">
             
                 <a href="appendix/mermaid_samples.html">
             
@@ -166,7 +205,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="appendix/plantuml_samples.html">
+        <li class="chapter " data-level="1.10" data-path="appendix/plantuml_samples.html">
             
                 <a href="appendix/plantuml_samples.html">
             
@@ -179,7 +218,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="appendix/markdown_samples.html">
+        <li class="chapter " data-level="1.11" data-path="appendix/markdown_samples.html">
             
                 <a href="appendix/markdown_samples.html">
             
@@ -246,8 +285,11 @@
 <p>AIによるプログラム生成とフリーランスやオフショア、未熟なプログラマーにプログラム開発を発注・委託したりすることには、ある共通点があります。それは <strong><em>そのプログラムが正しいかどうか、わからないこと</em></strong> です。</p>
 <p>本章では、プログラムの品質担保手法について説明します。</p>
 <h2 id="プログラムが「正しい」ということとは">プログラムが「正しい」ということとは</h2>
-<p>あなたがFizzBuzzプログラムをAIに要求としたとしましょう。<br>❗FizzBuzzプログラムとは、与えた数字が3の倍数の場合は「Fizz」、5の倍数の場合は「Buzz」、3の倍数かつ5の倍数の場合は「FizzBuzz」、どれでもない場合はその数字を出力するプログラムのことです。<br>もしあなたが「与えた数字が3の倍数の場合は「Fizz」、5の倍数の場合は「Buzz」、3の倍数かつ5の倍数の場合は「FizzBuzz」、どれでもない場合はその数字を出力するプログラムを書いてください」とだけ言ったら、どんなプログラムが出来上がるでしょうか？バグがあるかもしれません。15と入力すると「FizzBuzzFizzBuzz」と出力されてしまうかもしれません。数字が負の数や少数だったり、2147483647を超えるとエラーが発生してシステムが落ちるかもしれません。大量の文字列を入力するとバッファオーバーフローが発生しPCが乗っ取られるかもしれません。  </p>
-<p>一体なにが悪かったのでしょうか？AI？あなたの指示？仕様？？<br>ここでは犯人探しはしません。「正しい」ということを確認できる手法を解説するに留めます。<br>もちろん、信頼できる熟練の技術者が十分な人数いる場合にはこのようなことをする必要は無いかもしれません。しかし、大抵の場合はプログラムの品質をなんらかの形で担保する必要があります。  </p>
+<p>たとえばあなたがFizzBuzzプログラムをAIに要求としたとしましょう。  </p>
+<blockquote>
+<p>❗FizzBuzzプログラムとは、与えた数字が3の倍数の場合は「Fizz」、5の倍数の場合は「Buzz」、3の倍数かつ5の倍数の場合は「FizzBuzz」、どれでもない場合はその数字を出力するプログラムのことです。<br>もしあなたが「与えた数字が3の倍数の場合は「Fizz」、5の倍数の場合は「Buzz」、3の倍数かつ5の倍数の場合は「FizzBuzz」、どれでもない場合はその数字を出力するプログラムを書いてください」とだけ言ったら、どんなプログラムが出来上がるでしょうか？バグがあるかもしれません。15と入力すると「FizzBuzzFizzBuzz」と出力されてしまうかもしれません。数字が負の数や少数だったり、2147483647を超えるとエラーが発生してシステムが落ちるかもしれません。大量の文字列を入力するとバッファオーバーフローが発生しPCが乗っ取られるかもしれません。  </p>
+</blockquote>
+<p>一体なにが悪かったのでしょうか？AI？あなたの指示？仕様？？<br>ここでは犯人探しはしません。「正しい」ということを確認できる手法を解説するに留めます。<br>信頼できる熟練の技術者が大勢いて全員が無償で作業してくれる場合には品質担保手法について考える必要は無いかもしれません。しかし、大抵の場合はプログラムの品質をなんらかの形で担保する必要があります。  </p>
 <h2 id="プログラムの品質を担保する手法">プログラムの品質を担保する手法</h2>
 <p>プログラムの品質を担保するには、以下のような手法が存在します。</p>
 <ul>
@@ -273,12 +315,9 @@
 <p>形式手法を適用できない場合、自動テストによりプログラムの品質を担保します。<br>自動テストでは、人間の手では到底できないような膨大な量のテストケースでも高速にテストすることができます。<br>また、後述のCI/CDによって、なんらかのプログラムの変更が他のプログラムに影響してバグが発生した場合にも自動で検知されます。</p>
 <p>自動テストは現在のシステム開発においては、よほど特殊な事情（バグがたくさんあった方が儲かると経営者が判断した、バグにより社会を混乱させたいという願望がある、など）がない限りは必ず使用されます。<br>自動テストのためも完備されていて、現代的な全てのプログラム言語には自動テストのためのツールが存在します。<br>しかし、これらも正しく使わなければなんの意味もありません。自動テストを利用する勘どころは以下の通りです。</p>
 <ul>
-<li>常に更新し、常にテストする
-せっかく自動テストが使える環境にあっても、仕様の更新に合わせてテストも更新されなければなんの意味もありません。また、常にテストされなければいつバグが発生したのかもわかりません。</li>
-<li>自動テストは書かれたことしかテストしない
-仕様を全て自動テストで書くことができれば、（仕様が完璧である限り）プログラムにはバグが無いことを確認することができます。</li>
-<li>自動テスト可能なプログラムを書く
-数万行に膨れ上がった、いわゆる「神クラス」を十分にテストすることは困難です。テスト可能なようにプログラムの構造を疎結合に保つことは自動テストの観点からも重要です。</li>
+<li>常に更新し、常にテストする<br>せっかく自動テストが使える環境にあっても、仕様の更新に合わせてテストも更新されなければなんの意味もありません。また、常にテストされなければいつバグが発生したのかもわかりません。</li>
+<li>自動テストは書かれたことしかテストしない<br>仕様を全て自動テストで書くことができれば、（仕様が完璧である限り）プログラムにはバグが無いことを確認することができます。</li>
+<li>自動テスト可能なプログラムを書く<br>数万行に膨れ上がった、いわゆる「神クラス」を十分にテストすることは困難です。テスト可能なようにプログラムの構造を疎結合に保つことは自動テストの観点からも重要です。</li>
 </ul>
 <p>一般的なフロントエンドのテスト指針であるThe Testing Trophy<sup><a href="#fn_4" id="reffn_4">4</a></sup>を参考に、自動テストを以下の種類に分けその性質とテストの粒度を説明します。</p>
 <ul>
@@ -360,7 +399,7 @@
                 </a>
                 
                 
-                <a href="plantumltest.md" class="navigation navigation-next " aria-label="Next page: 生産性が高く修正の追跡が可能な仕様書管理手法">
+                <a href="how_to_management_documents.html" class="navigation navigation-next " aria-label="Next page: 生産性が高く修正の追跡が可能な仕様書管理手法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -371,7 +410,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法","level":"1.2","depth":1,"next":{"title":"生産性が高く修正の追跡が可能な仕様書管理手法","level":"1.3","depth":1,"path":"markdown/plantumltest.md","ref":"markdown/plantumltest.md","articles":[]},"previous":{"title":"よりよいシステム開発の手引き","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/how_to_develop.md","mtime":"2023-08-27T10:50:40.648Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-08-27T10:52:41.181Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法","level":"1.2","depth":1,"next":{"title":"生産性が高く修正の追跡が可能な仕様書管理手法","level":"1.3","depth":1,"path":"markdown/how_to_management_documents.md","ref":"markdown/how_to_management_documents.md","articles":[]},"previous":{"title":"よりよいシステム開発の手引き","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/how_to_develop.md","mtime":"2023-08-27T13:33:03.109Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-08-27T13:34:54.903Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
