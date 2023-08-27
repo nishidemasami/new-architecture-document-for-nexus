@@ -1,0 +1,450 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <title>AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.8">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="plantumltest.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">目次</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    本ドキュメント「よりよいシステム開発の手引き」について
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="how_to_develop.html">
+            
+                <a href="how_to_develop.html">
+            
+                    
+                    AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="plantumltest.html">
+            
+                <a href="plantumltest.html">
+            
+                    
+                    生産性が高く修正の追跡が可能な仕様書管理手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="plantumltest.html">
+            
+                <a href="plantumltest.html">
+            
+                    
+                    保守性が高くセキュリティが高いシステム開発の手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="plantumltest.html">
+            
+                <a href="plantumltest.html">
+            
+                    
+                    利用者が増えても自動でスケールするシステムの開発、および運用手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="appendix/mermaid_samples.html">
+            
+                <a href="appendix/mermaid_samples.html">
+            
+                    
+                    付録：Mermaid記法 サンプル集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="appendix/plantuml_samples.html">
+            
+                <a href="appendix/plantuml_samples.html">
+            
+                    
+                    付録：PlantUML記法 サンプル集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="appendix/markdown_samples.html">
+            
+                <a href="appendix/markdown_samples.html">
+            
+                    
+                    付録：Markdown記法 サンプル集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="aiによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法">AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法</h1>
+<p>今やAIを駆使してプログラミングをすることは当たり前の時代です。<br>たとえば以下のようなサービスがあります。</p>
+<ul>
+<li>Amazon CodeWhisperer <a href="https://aws.amazon.com/jp/codewhisperer/" target="_blank">https://aws.amazon.com/jp/codewhisperer/</a></li>
+<li>GitHub Copilot <a href="https://docs.github.com/ja/copilot" target="_blank">https://docs.github.com/ja/copilot</a></li>
+</ul>
+<p>AIによるプログラム生成とフリーランスやオフショア、未熟なプログラマーにプログラム開発を発注・委託したりすることには、ある共通点があります。それは <strong><em>そのプログラムが正しいかどうか、わからないこと</em></strong> です。</p>
+<p>本章では、プログラムの品質担保手法について説明します。</p>
+<h2 id="プログラムが「正しい」ということとは">プログラムが「正しい」ということとは</h2>
+<p>あなたがFizzBuzzプログラムをAIに要求としたとしましょう。<br>❗FizzBuzzプログラムとは、与えた数字が3の倍数の場合は「Fizz」、5の倍数の場合は「Buzz」、3の倍数かつ5の倍数の場合は「FizzBuzz」、どれでもない場合はその数字を出力するプログラムのことです。<br>もしあなたが「与えた数字が3の倍数の場合は「Fizz」、5の倍数の場合は「Buzz」、3の倍数かつ5の倍数の場合は「FizzBuzz」、どれでもない場合はその数字を出力するプログラムを書いてください」とだけ言ったら、どんなプログラムが出来上がるでしょうか？バグがあるかもしれません。15と入力すると「FizzBuzzFizzBuzz」と出力されてしまうかもしれません。数字が負の数や少数だったり、2147483647を超えるとエラーが発生してシステムが落ちるかもしれません。大量の文字列を入力するとバッファオーバーフローが発生しPCが乗っ取られるかもしれません。  </p>
+<p>一体なにが悪かったのでしょうか？AI？あなたの指示？仕様？？<br>ここでは犯人探しはしません。「正しい」ということを確認できる手法を解説するに留めます。<br>もちろん、信頼できる熟練の技術者が十分な人数いる場合にはこのようなことをする必要は無いかもしれません。しかし、大抵の場合はプログラムの品質をなんらかの形で担保する必要があります。  </p>
+<h2 id="プログラムの品質を担保する手法">プログラムの品質を担保する手法</h2>
+<p>プログラムの品質を担保するには、以下のような手法が存在します。</p>
+<ul>
+<li>形式手法</li>
+<li>自動テスト</li>
+<li>静的プログラム解析</li>
+<li>型</li>
+</ul>
+<h3 id="形式手法">形式手法</h3>
+<p>形式手法は、プログラムが正しいことを数学的に証明する手法です。
+古くは自動改札機の運賃計算プログラム<sup><a href="#fn_1" id="reffn_1">1</a></sup>、最近ではAmazon S3<sup><a href="#fn_2" id="reffn_2">2</a></sup>などで、プログラムの正しさの検証に使用されています。IPAは国外の12件の事例について読み応えのある資料をPDFで公開<sup><a href="#fn_3" id="reffn_3">3</a></sup>しています。</p>
+<blockquote id="fn_1">
+<sup>1</sup>. <a href="https://www.publickey1.jp/blog/12/_1040_2.html" target="_blank">自動改札機の運賃計算プログラムはいかにデバッグされているのか？ 10の40乗という運賃パターンのテスト方法を開発者が解説（後編） － Publickey</a><a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. <a href="https://assets.amazon.science/07/6c/81bfc2c243249a8b8b65cc2135e4/using-lightweight-formal-methods-to-validate-a-key-value-storage-node-in-amazon-s3.pdf" target="_blank">Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3</a><a href="#reffn_2" title="Jump back to footnote [2] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_3">
+<sup>3</sup>. <a href="https://www.ipa.go.jp/archive/files/000004547.pdf" target="_blank">https://www.ipa.go.jp/archive/files/000004547.pdf</a>,<a href="https://www.ipa.go.jp/archive/files/000004548.pdf" target="_blank">https://www.ipa.go.jp/archive/files/000004548.pdf</a><a href="#reffn_3" title="Jump back to footnote [3] in the text."> ↩</a>
+</blockquote>
+<p>形式手法は非常に強力ですが、仕様を厳密に定義できるものにしか適用できません。しかし先述の自動改札機の運賃計算プログラム事例では運賃計算の仕様の不備が判明するなど、裏を返せば仕様を厳密に定義”させられる”というメリットがあるとも言えます。</p>
+<h3 id="自動テスト">自動テスト</h3>
+<p>形式手法を適用できない場合、自動テストによりプログラムの品質を担保します。<br>自動テストでは、人間の手では到底できないような膨大な量のテストケースでも高速にテストすることができます。<br>また、後述のCI/CDによって、なんらかのプログラムの変更が他のプログラムに影響してバグが発生した場合にも自動で検知されます。</p>
+<p>自動テストは現在のシステム開発においては、よほど特殊な事情（バグがたくさんあった方が儲かると経営者が判断した、バグにより社会を混乱させたいという願望がある、など）がない限りは必ず使用されます。<br>自動テストのためも完備されていて、現代的な全てのプログラム言語には自動テストのためのツールが存在します。<br>しかし、これらも正しく使わなければなんの意味もありません。自動テストを利用する勘どころは以下の通りです。</p>
+<ul>
+<li>常に更新し、常にテストする
+せっかく自動テストが使える環境にあっても、仕様の更新に合わせてテストも更新されなければなんの意味もありません。また、常にテストされなければいつバグが発生したのかもわかりません。</li>
+<li>自動テストは書かれたことしかテストしない
+仕様を全て自動テストで書くことができれば、（仕様が完璧である限り）プログラムにはバグが無いことを確認することができます。</li>
+<li>自動テスト可能なプログラムを書く
+数万行に膨れ上がった、いわゆる「神クラス」を十分にテストすることは困難です。テスト可能なようにプログラムの構造を疎結合に保つことは自動テストの観点からも重要です。</li>
+</ul>
+<p>一般的なフロントエンドのテスト指針であるThe Testing Trophy<sup><a href="#fn_4" id="reffn_4">4</a></sup>を参考に、自動テストを以下の種類に分けその性質とテストの粒度を説明します。</p>
+<ul>
+<li>End to End</li>
+<li>Integration</li>
+<li>Unit</li>
+<li>Static</li>
+</ul>
+<h4 id="end-to-end">End to End</h4>
+<p>エンドツーエンドのテストです。いわゆる全体テストとかシステムテスト、総合テストと呼ばれるものです。
+たとえばWebシステムの自動テストであれば、Dockerで自動でWebサーバとDBサーバを起動し、SeleniumやPuppeteer、Playwrightなどを使って自動でブラウザを叩くという流れをテストします。
+複雑で規模が大きいテストなため当然ながらテストの記述量も多くなり書くのにも時間もかかり、かつ、テストの粒度も荒くなります。たとえば「ひらがなしか入力できない」という項目に対して全漢字をチェックするようなテストはこの段階ではしません。この段階のテストのケース数はコストの観点からそこまで多くはできません。</p>
+<h4 id="integration">Integration</h4>
+<p>いわゆる結合テストです。
+たとえばWebシステムの自動テストであれば、Webサーバでの動作が正しくDBに反映されるかから、なんらかの機能が正しくなんらかの共通ロジックを呼ぶことができているかまで多くのテストをここでします。The Testing Trophy<sup><a href="#fn_4" id="reffn_4">4</a></sup>ではこの段階のテストが最も量が多いです。</p>
+<blockquote id="fn_4">
+<sup>4</sup>. <a href="https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications" target="_blank">The Testing Trophy and Testing Classifications</a><a href="#reffn_4" title="Jump back to footnote [4] in the text."> ↩</a>
+</blockquote>
+<h3 id="静的プログラム解析">静的プログラム解析</h3>
+<h3 id="型">型</h3>
+<p>型はプログラムに標準で備わっている軽量の形式手法であると言えます。
+以下のプログラミング言語を使用すれば、自動的に型の恩恵を預かることができます。</p>
+<ul>
+<li>Rust</li>
+<li>TypeScript</li>
+<li>Go</li>
+<li>Java(Kotlin)</li>
+<li>Swift</li>
+</ul>
+<p>以下のプログラミング言語</p>
+<p>型があるプログラム言語を利用することは以下のメリットがあります。</p>
+<ul>
+<li>発注したプログラムの検収作業が正確にできるようになる。</li>
+<li>開発効率が向上する。</li>
+<li>モジュール同士が疎結合になり、開発がスケールする。</li>
+</ul>
+<h3 id="手動テスト">手動テスト</h3>
+<h2 id="idl">IDL</h2>
+<p>IDL型定義</p>
+<h2 id="graphql">GraphQL</h2>
+<p>graphqlsファイル</p>
+<h2 id="protocol-buffers">Protocol Buffers</h2>
+<p>.protoファイル</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 本ドキュメント「よりよいシステム開発の手引き」について">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="plantumltest.html" class="navigation navigation-next " aria-label="Next page: 生産性が高く修正の追跡が可能な仕様書管理手法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法","level":"1.2","depth":1,"next":{"title":"生産性が高く修正の追跡が可能な仕様書管理手法","level":"1.3","depth":1,"path":"markdown/plantumltest.md","ref":"markdown/plantumltest.md","articles":[]},"previous":{"title":"本ドキュメント「よりよいシステム開発の手引き」について","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/how_to_develop.md","mtime":"2023-08-27T10:23:13.780Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-08-27T10:25:05.835Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

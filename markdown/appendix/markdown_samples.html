@@ -1,0 +1,680 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <title>付録：Markdown記法 サンプル集 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.8">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="plantuml_samples.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">目次</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    本ドキュメント「よりよいシステム開発の手引き」について
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../how_to_develop.html">
+            
+                <a href="../how_to_develop.html">
+            
+                    
+                    AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../plantumltest.html">
+            
+                <a href="../plantumltest.html">
+            
+                    
+                    生産性が高く修正の追跡が可能な仕様書管理手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../plantumltest.html">
+            
+                <a href="../plantumltest.html">
+            
+                    
+                    保守性が高くセキュリティが高いシステム開発の手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../plantumltest.html">
+            
+                <a href="../plantumltest.html">
+            
+                    
+                    利用者が増えても自動でスケールするシステムの開発、および運用手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="mermaid_samples.html">
+            
+                <a href="mermaid_samples.html">
+            
+                    
+                    付録：Mermaid記法 サンプル集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="plantuml_samples.html">
+            
+                <a href="plantuml_samples.html">
+            
+                    
+                    付録：PlantUML記法 サンプル集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="markdown_samples.html">
+            
+                <a href="markdown_samples.html">
+            
+                    
+                    付録：Markdown記法 サンプル集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >付録：Markdown記法 サンプル集</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="付録：markdown記法-サンプル集">付録：Markdown記法 サンプル集</h1>
+<h2 id="見出し">見出し</h2>
+<p>1個から6個シャープで見出しを記述する。
+※シャープと見出し文字の間には半角スペースを1つ入れること</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md"># 見出し1
+## 見出し2
+### 見出し3
+#### 見出し4
+##### 見出し5
+###### 見出し6
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<h1 id="見出し1">見出し1</h1>
+<h2 id="見出し2">見出し2</h2>
+<h3 id="見出し3">見出し3</h3>
+<h4 id="見出し4">見出し4</h4>
+<h5 id="見出し5">見出し5</h5>
+<h6 id="見出し6">見出し6</h6>
+<h2 id="箇条書きリスト">箇条書きリスト</h2>
+<p>ハイフン、プラス、アスタリスクのいずれかで箇条書きリストを記述可能。
+※ハイフン、プラス、アスタリスクと箇条書きの項目の間には半角スペースを1つ入れること</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">- リスト1
+    - ネスト リスト1_1
+        - ネスト リスト1_1_1
+        - ネスト リスト1_1_2
+    - ネスト リスト1_2
+- リスト2
+- リスト3
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<ul>
+<li>リスト1<ul>
+<li>ネスト リスト1_1<ul>
+<li>ネスト リスト1_1_1</li>
+<li>ネスト リスト1_1_2</li>
+</ul>
+</li>
+<li>ネスト リスト1_2</li>
+</ul>
+</li>
+<li>リスト2</li>
+<li>リスト3</li>
+</ul>
+<h2 id="番号付きリスト">番号付きリスト</h2>
+<p>数値+半角ドットで番号付きリストを記述可能。
+番号の内容は何でもいい。実際に表示される際に適切な番号で表示される。
+そのため、一般的にはすべて <code>1. 内容</code> で記載すると変更に強く楽です。
+※数値+半角ドットと箇条書きの項目の間には半角スペースを1つ入れること</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">1. 番号付きリスト1
+    1. 番号付きリスト1_1
+    1. 番号付きリスト1_2
+1. 番号付きリスト2
+1. 番号付きリスト3
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<ol>
+<li>番号付きリスト1<ol>
+<li>番号付きリスト1_1</li>
+<li>番号付きリスト1_2</li>
+</ol>
+</li>
+<li>番号付きリスト2</li>
+<li>番号付きリスト3</li>
+</ol>
+<h2 id="引用">引用</h2>
+<pre><code class="lang-md">&gt; お世話になります。xxxです。
+&gt; 
+&gt; ご連絡いただいた、バグの件ですが、仕様です。
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<blockquote>
+<p>お世話になります。xxxです。</p>
+<p>ご連絡いただいた、バグの件ですが、仕様です。</p>
+</blockquote>
+<h2 id="二重引用">二重引用</h2>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">&gt; お世話になります。xxxです。
+&gt; 
+&gt; ご連絡いただいた、バグの件ですが、仕様です。
+&gt;&gt; お世話になります。 yyyです。
+&gt;&gt; 
+&gt;&gt; あの新機能バグってるっすね
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<blockquote>
+<p>お世話になります。xxxです。</p>
+<p>ご連絡いただいた、バグの件ですが、仕様です。</p>
+<blockquote>
+<p>お世話になります。 yyyです。</p>
+<p>あの新機能バグってるっすね</p>
+</blockquote>
+</blockquote>
+<h2 id="pre記法スペース4-or-タブ">pre記法(スペース4 or タブ)</h2>
+<p>半角スペース4個もしくはタブで、コードブロックをpre表示できます</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">    # Tab
+    class Hoge
+        def hoge
+            print &apos;hoge&apos;
+        end
+    end
+
+---
+
+    # Space
+    class Hoge
+      def hoge
+        print &apos;hoge&apos;
+      end
+    end
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<pre><code>class Hoge
+    def hoge
+        print &apos;hoge&apos;
+    end
+end
+</code></pre><hr>
+<pre><code>class Hoge
+  def hoge
+    print &apos;hoge&apos;
+  end
+end
+</code></pre><h2 id="code記法">code記法</h2>
+<p>バッククォートで文字列を囲むことでコードの一部を表示可能です。</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">インストールコマンドは `gem install hoge` です
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<p>インストールコマンドは <code>gem install hoge</code> です</p>
+<h2 id="強調：em">強調：&lt;em&gt;</h2>
+<p>アスタリスクもしくはアンダースコア1個で文字列を囲むことで強調します。
+見た目は斜体になります。</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">normal *italic* normal
+normal _italic_ normal
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<p>normal <em>italic</em> normal
+normal <em>italic</em> normal</p>
+<h2 id="強調：strong">強調：&lt;strong&gt;</h2>
+<p>アスタリスクもしくはアンダースコア2個で文字列を囲むことで強調にします。
+見た目は太字になります。</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">normal **bold** normal
+normal __bold__ normal
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<p>normal <strong>bold</strong> normal
+normal <strong>bold</strong> normal</p>
+<h2 id="強調：em--strong">強調：&lt;em&gt; + &lt;strong&gt;</h2>
+<p>アスタリスクもしくはアンダースコア3個で文字列を囲むことで &lt;em&gt; と &lt;strong&gt; による強調を両方適用します。
+見た目は斜体かつ太字になります。</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">normal ***bold*** normal
+normal ___bold___ normal
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<p>normal <strong><em>bold</em></strong> normal
+normal <strong><em>bold</em></strong> normal</p>
+<h2 id="水平線">水平線</h2>
+<p>アンダースコア、アスタリスク、ハイフンなどを3つ以上連続して記述することで水平線を表示します。
+※連続するハイフンなどの間にはスペースがあっても良い</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-markdown">
+***
+
+___
+
+---
+
+*    *    *
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<hr>
+<hr>
+<hr>
+<hr>
+<h2 id="リンク">リンク</h2>
+<p><code>[表示文字](リンクURL)</code>形式でリンクを記述できます</p>
+<pre><code class="lang-md">[Google先生](https://www.google.co.jp/)
+</code></pre>
+<p><a href="https://www.google.co.jp/" target="_blank">Google先生</a></p>
+<h2 id="定義参照リンク">定義参照リンク</h2>
+<p>Markdownの文書の途中に長いリンクを記述したくない場合は、
+同じリンクの参照を何度も利用する場合は、リンク先への参照を定義することができます。</p>
+<pre><code class="lang-markdown">[こっちからgoogle][google]
+その他の文章
+[こっちからもgoogle][google]
+
+[google]: https://www.google.co.jp/
+</code></pre>
+<p><a href="https://www.google.co.jp/" target="_blank">こっちからgoogle</a>
+その他の文章
+<a href="https://www.google.co.jp/" target="_blank">こっちからもgoogle</a></p>
+<h2 id="github-flavored-markdowngfm">GitHub Flavored Markdown(GFM)</h2>
+<p>GitHub Flavored Markdown(GFM)はGitHubの独自仕様を加えたMarkdown記法。
+以降、GFMと記載します。</p>
+<h2 id="gfmリンクテキスト簡易記法">GFM:リンクテキスト簡易記法</h2>
+<p>URLは記述するだけで自動的にリンクになります。</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">https://www.google.co.jp/
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<p><a href="https://www.google.co.jp/" target="_blank">https://www.google.co.jp/</a></p>
+<h2 id="gfm取り消し線">GFM:取り消し線</h2>
+<p>チルダ2個で文字列を囲むことで取り消し線を利用できます。</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">~~取り消し線~~
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<p><del>取り消し線</del></p>
+<h2 id="gfmpre記法チルダ×3">GFM:pre記法(チルダ×3)</h2>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">　~~~
+　class Hoge
+　  def hoge
+　    print &apos;hoge&apos;
+　  end
+　end
+　~~~
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<pre><code>class Hoge
+  def hoge
+    print &apos;hoge&apos;
+  end
+end
+</code></pre><h2 id="gfmpre記法バッククォート×3">GFM:pre記法(バッククォート×3)</h2>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">　```
+　class Hoge
+　  def hoge
+　    print &apos;hoge&apos;
+　  end
+　end
+　```
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<pre><code>class Hoge
+  def hoge
+    print &apos;hoge&apos;
+  end
+end
+</code></pre><h2 id="gfmpre記法シンタックスハイライト">GFM:pre記法(シンタックスハイライト)</h2>
+<p>チルダ、もしくはバッククォート3つの後ろに対象シンタックスの言語名を記述します。</p>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">　~~~ruby
+　class Hoge
+　  def hoge
+　    print &apos;hoge&apos;
+　  end
+　end
+　~~~
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<pre><code class="lang-ruby">class Hoge
+  def hoge
+    print &apos;hoge&apos;
+  end
+end
+</code></pre>
+<h2 id="gfm表組み">GFM:表組み</h2>
+<h3 id="記述例">記述例</h3>
+<pre><code class="lang-md">|header1|header2|header3|
+|:--|--:|:--:|
+|align left|align right|align center|
+|a|b|c|
+</code></pre>
+<h3 id="表示例">表示例</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">header1</th>
+<th style="text-align:right">header2</th>
+<th style="text-align:center">header3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">align left</td>
+<td style="text-align:right">align right</td>
+<td style="text-align:center">align center</td>
+</tr>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:right">b</td>
+<td style="text-align:center">c</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gfmページ内リンク">GFM:ページ内リンク</h2>
+<p>GitHubのMarkdownを利用すると、見出し記法を利用した際に
+アンカーが自動的に作成されます。
+そのアンカーを利用したページ内リンクを簡単に作成できます。</p>
+<pre><code class="lang-md">## menu
+* [to header1](#header1)
+* [to header2](#header2)
+
+<!-- some long code -->
+
+[return to menu](#menu)
+### header1
+### header2
+</code></pre>
+<p>少し省略してますが、こんなかんじのHTMLになります。</p>
+<pre><code class="lang-html"><h2><a name="user-content-menu" href="#menu">menu</a></h2>
+<a href="#header1">to header1</a>
+<a href="#header2">to header2</a>
+
+<!-- some long code -->
+
+<a href="#menu">to menu</a>
+<h3><a name="user-content-header1" href="#header1">header1</a></h3>
+<h3><a name="user-content-header2" href="#header2">header2</a></h3>
+</code></pre>
+<h2 id="出典">出典</h2>
+<p><a href="https://qiita.com/tbpgr/items/989c6badefff69377da7" target="_blank">Markdown記法 サンプル集</a>より引用</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="plantuml_samples.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 付録：PlantUML記法 サンプル集">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"付録：Markdown記法 サンプル集","level":"1.8","depth":1,"previous":{"title":"付録：PlantUML記法 サンプル集","level":"1.7","depth":1,"path":"markdown/appendix/plantuml_samples.md","ref":"markdown/appendix/plantuml_samples.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/appendix/markdown_samples.md","mtime":"2023-08-27T10:23:13.780Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-08-27T10:25:05.835Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
