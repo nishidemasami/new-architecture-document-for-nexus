@@ -56,7 +56,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="markdown/how_to_develop.html" />
+    <link rel="next" href="markdown/how_to_management_aws_services.html" />
     
     
 
@@ -99,7 +99,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="markdown/how_to_develop.html">
+        <li class="chapter " data-level="1.2" data-path="markdown/how_to_management_aws_services.html">
+            
+                <a href="markdown/how_to_management_aws_services.html">
+            
+                    
+                    利用者が増えても自動でスケールするシステムの開発手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="markdown/how_to_develop.html">
             
                 <a href="markdown/how_to_develop.html">
             
@@ -112,7 +125,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="markdown/how_to_management_documents.html">
+        <li class="chapter " data-level="1.4" data-path="markdown/how_to_management_documents.html">
             
                 <a href="markdown/how_to_management_documents.html">
             
@@ -125,7 +138,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="markdown/how_to_define_requirements.html">
+        <li class="chapter " data-level="1.5" data-path="markdown/how_to_define_requirements.html">
             
                 <a href="markdown/how_to_define_requirements.html">
             
@@ -138,7 +151,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" >
+        <li class="chapter " data-level="1.6" >
             
                 <span>
             
@@ -146,19 +159,6 @@
                     保守性が高くセキュリティが高いシステム開発の手法
             
                 </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6" data-path="markdown/how_to_management_aws_services.html">
-            
-                <a href="markdown/how_to_management_aws_services.html">
-            
-                    
-                    利用者が増えても自動でスケールするシステムの開発手法
-            
-                </a>
             
 
             
@@ -275,19 +275,21 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="本ドキュメント「よりよいシステム開発の手引き」について">本ドキュメント「よりよいシステム開発の手引き」について</h1>
-<p>本ドキュメント「よりよいシステム開発の手引き」は、よりよいシステム開発のための手引きです。<br>以下について4つの章に分けて説明しています。</p>
+<p>本ドキュメント「よりよいシステム開発の手引き」は、よりよいシステム開発のための手引きです。<br>以下について6つの章に分けて説明しています。</p>
 <ul>
+<li>利用者が増えても自動でスケールするシステムの開発手法</li>
 <li>AIによるプログラム生成により開発されたプログラムの品質を担保する手法</li>
 <li>生産性が高く修正の追跡が可能な仕様書の管理手法</li>
+<li>現代的な要件定義の手法</li>
 <li>保守性が高くセキュリティが高いシステム開発の手法</li>
-<li>利用者が増えても自動でスケールするシステムの開発、および運用手法</li>
+<li>実践</li>
 </ul>
 <p>本ドキュメントはMarkdownで書かれGitHubで公開されており、そしてまさに今も追加され続けており誰でも(あなたも！)加筆修正に参加することができます。<br>また、誤字脱字を発見したり内容に誤りがあれば、いつでもGitHub Issuesに投稿してください。</p>
 <ul>
 <li>GitHub <a href="https://github.com/nishidemasami/new-architecture-document-for-nexus" target="_blank">https://github.com/nishidemasami/new-architecture-document-for-nexus</a></li>
 <li>GitHub Issues <a href="https://github.com/nishidemasami/new-architecture-document-for-nexus/issues" target="_blank">https://github.com/nishidemasami/new-architecture-document-for-nexus/issues</a></li>
 </ul>
-<p>Markdownで書かれたドキュメントは、誰もが読みやすいようにHTMLとPDFで公開しています。<br>HTML版はHonkitで生成されGitHub Pagesで公開されており、GitHub Actionsによって常に最新情報に更新され続けています。(MermaidやPlantUMLはHTML版だと少し表示が怪しいですが……。)<br>PDF版はCalibreで生成されGitHub Releasesで管理されています。これもHTML版と同様にGitHub Actionsによって常に最新情報に更新され続けています。  </p>
+<p>Markdownで書かれたドキュメントは、誰もが読みやすいようにHTMLとPDFで公開しています。<br>HTML版はHonkitで生成されGitHub Pagesで公開されており、Markdownが更新されるとGitHub Actionsによって常に最新データに更新されるようになっています。(MermaidやPlantUMLはHTML版だと少し表示が怪しいですが……。)<br>PDF版はCalibreで生成されGitHub Releasesで管理されています。これもHTML版と同様にMarkdownが更新されるとGitHub Actionsによって常に最新データに更新されるようになっています。  </p>
 <ul>
 <li>HTML版 <a href="https://nishidemasami.github.io/new-architecture-document-for-nexus/" target="_blank">https://nishidemasami.github.io/new-architecture-document-for-nexus/</a>  </li>
 <li>PDF版 <a href="https://github.com/nishidemasami/new-architecture-document-for-nexus/releases/download/pdf_relrase/new-architecture-document-for-nexus.pdf" target="_blank">https://github.com/nishidemasami/new-architecture-document-for-nexus/releases/download/pdf_relrase/new-architecture-document-for-nexus.pdf</a>  </li>
@@ -304,6 +306,10 @@
 </ul>
 <p>本章です。</p>
 <ul>
+<li><a href="markdown/how_to_management_aws_services.html">利用者が増えても自動でスケールするシステムの開発手法</a></li>
+</ul>
+<p>この章ではクラウドサービスを利用して、スケーラビリティを開発の段階からコントロールするための手法について説明します。</p>
+<ul>
 <li><a href="markdown/how_to_develop.html">AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法</a></li>
 </ul>
 <p>この章では、プログラムの品質担保の手法について説明します。</p>
@@ -319,10 +325,6 @@
 <li><a href>保守性が高くセキュリティが高いシステム開発の手法</a></li>
 </ul>
 <p>この章では、保守性やセキュリティをシステム開発の段階からコントロールするための手法について説明します。</p>
-<ul>
-<li><a href="markdown/how_to_management_aws_services.html">利用者が増えても自動でスケールするシステムの開発手法</a></li>
-</ul>
-<p>この章ではクラウドサービスを利用して、スケーラビリティを開発の段階からコントロールするための手法について説明します。</p>
 <ul>
 <li><a href>実践</a></li>
 </ul>
@@ -365,7 +367,7 @@
             
                 
                 
-                <a href="markdown/how_to_develop.html" class="navigation navigation-next navigation-unique" aria-label="Next page: AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法">
+                <a href="markdown/how_to_management_aws_services.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 利用者が増えても自動でスケールするシステムの開発手法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -376,7 +378,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"よりよいシステム開発の手引き","level":"1.1","depth":1,"next":{"title":"AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法","level":"1.2","depth":1,"path":"markdown/how_to_develop.md","ref":"markdown/how_to_develop.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"README.md","mtime":"2023-08-27T13:33:03.109Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-08-27T13:34:54.903Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"よりよいシステム開発の手引き","level":"1.1","depth":1,"next":{"title":"利用者が増えても自動でスケールするシステムの開発手法","level":"1.2","depth":1,"path":"markdown/how_to_management_aws_services.md","ref":"markdown/how_to_management_aws_services.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"README.md","mtime":"2023-08-28T11:34:48.974Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-08-28T11:36:48.424Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
