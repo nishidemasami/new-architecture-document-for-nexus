@@ -1,12 +1,14 @@
 # 本ドキュメント「よりよいシステム開発の手引き」について
 
 本ドキュメント「よりよいシステム開発の手引き」は、よりよいシステム開発のための手引きです。  
-以下について4つの章に分けて説明しています。
+以下について6つの章に分けて説明しています。
 
+- 利用者が増えても自動でスケールするシステムの開発手法
 - AIによるプログラム生成により開発されたプログラムの品質を担保する手法
 - 生産性が高く修正の追跡が可能な仕様書の管理手法
+- 現代的な要件定義の手法
 - 保守性が高くセキュリティが高いシステム開発の手法
-- 利用者が増えても自動でスケールするシステムの開発、および運用手法
+- 実践
 
 本ドキュメントはMarkdownで書かれGitHubで公開されており、そしてまさに今も追加され続けており誰でも(あなたも！)加筆修正に参加することができます。  
 また、誤字脱字を発見したり内容に誤りがあれば、いつでもGitHub Issuesに投稿してください。
@@ -15,8 +17,8 @@
 - GitHub Issues https://github.com/nishidemasami/new-architecture-document-for-nexus/issues
 
 Markdownで書かれたドキュメントは、誰もが読みやすいようにHTMLとPDFで公開しています。  
-HTML版はHonkitで生成されGitHub Pagesで公開されており、GitHub Actionsによって常に最新情報に更新され続けています。(MermaidやPlantUMLはHTML版だと少し表示が怪しいですが……。)  
-PDF版はCalibreで生成されGitHub Releasesで管理されています。これもHTML版と同様にGitHub Actionsによって常に最新情報に更新され続けています。  
+HTML版はHonkitで生成されGitHub Pagesで公開されており、Markdownが更新されるとGitHub Actionsによって常に最新データに更新されるようになっています。(MermaidやPlantUMLはHTML版だと少し表示が怪しいですが……。)  
+PDF版はCalibreで生成されGitHub Releasesで管理されています。これもHTML版と同様にMarkdownが更新されるとGitHub Actionsによって常に最新データに更新されるようになっています。  
 
 - HTML版 https://nishidemasami.github.io/new-architecture-document-for-nexus/  
 - PDF版 https://github.com/nishidemasami/new-architecture-document-for-nexus/releases/download/pdf_relrase/new-architecture-document-for-nexus.pdf  
@@ -33,6 +35,10 @@ PDF版はCalibreで生成されGitHub Releasesで管理されています。こ�
 
 本章です。
 
+* [利用者が増えても自動でスケールするシステムの開発手法](markdown/how_to_management_aws_services.md)
+
+この章ではクラウドサービスを利用して、スケーラビリティを開発の段階からコントロールするための手法について説明します。
+
 * [AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法](markdown/how_to_develop.md)
 
 この章では、プログラムの品質担保の手法について説明します。
@@ -48,10 +54,6 @@ PDF版はCalibreで生成されGitHub Releasesで管理されています。こ�
 * [保守性が高くセキュリティが高いシステム開発の手法]()
 
 この章では、保守性やセキュリティをシステム開発の段階からコントロールするための手法について説明します。
-
-* [利用者が増えても自動でスケールするシステムの開発手法](markdown/how_to_management_aws_services.md)
-
-この章ではクラウドサービスを利用して、スケーラビリティを開発の段階からコントロールするための手法について説明します。
 
 * [実践]()
 

@@ -51,7 +51,7 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        name: pdf
+        name: PDF Release
         tag_name: pdf_relrase
         generate_release_notes: true
         files: ./new-architecture-document-for-nexus.pdf
