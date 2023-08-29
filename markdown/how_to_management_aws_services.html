@@ -302,16 +302,15 @@
 <p>以下の理由から、EC2でWEBアプリケーションを稼働させるべきではありません。</p>
 <ul>
 <li>EC2の本番環境にどんどん手が加えられ、いわゆる「秘伝のタレ」化してしまい、トラブルが発生した時に本番環境を新たに再構築できない事態が発生しうる</li>
-<li>アクセス数の予測が難しい場合、また、時間や曜日、月末月初などでアクセス数に増減がある場合でも、アクセス数が最も多い瞬間に合わせてインスタンスの性能を決定しなければならないため、コストが高い。</li>
-<li>EC2のSLAは非常に低く、よく落ちる</li>
-<li>EC2は非常に高価である</li>
-<li>EC2は自動ではスケールアップもスケールアウトもされず、急に大量のアクセスが来た場合に対応できない。また、スケールダウンもスケールインも自動ではされないため、たとえ1件もアクセスが来なくても同じ額が課金されてしまう。</li>
+<li>EC2のSLAは99.5%と非常に低く、よく落ちる</li>
 <li>新規開発システムをEC2でWEBアプリケーションを稼働させるメリットが無い。既存システムを利用するためであっても、EC2を利用するのではなくさくらインターネットの「さくらのVPS」やNTTの「WebARENA Indigo」などのサービスを利用したほうが運用コストが低くシステムの停止も少なくサービス品質も高い。</li>
+<li>EC2は自動ではスケールアップもスケールアウトもされず、急に大量のアクセスが来た場合に対応できない。また、スケールダウンもスケールインも自動ではされないため、たとえ1件もアクセスが来なくても同じ額が課金されてしまう。</li>
+<li>スケールアップもスケールアウトもしないシステムの場合、アクセス数の予測が難しい場合や日時によってアクセス数に増減がある場合などはアクセス数が最も多い瞬間に合わせてインスタンスの性能を決定しなければならないため、無駄が多い。</li>
 </ul>
-<p>極力WEBアプリケーションはLambdaで稼働させるべきです。WEBアプリケーションをEC2ではなくLambdaで稼働させるメリットは以下の通りです。</p>
+<p>極力WEBアプリケーションはLambdaで稼働させるべきです。<br>EC2と比較した、LambdaでWEBアプリケーションを稼働させるメリットは以下の通りです。</p>
 <ul>
 <li>EC2ではアクセスが無い時でも課金されるが、Lambdaであれば課金はアクセスに応じてのミリ秒単位であるため、運用コストが抑えられる(極端な話、アクセスが0件であれば課金されない)</li>
-<li>EC2ではセキュリティアップデートは自己責任でシステムを停止させて実施しなければならないが、Lambdaであればセキュリティアップデートが自動で安全に実施されシステム停止も発生しない</li>
+<li>EC2ではセキュリティアップデートを自己責任でシステムを停止させて実施しなければならないが、Lambdaであればセキュリティアップデートが自動で安全に実施されシステム停止も発生しない（※Lambdaでもセキュリティアップデートを手動でする設定もある）</li>
 <li>EC2ではアクセスに応じてスケールアップ・スケールアウトさせるのが難しいが、Lambdaでは自動でスケールするため、急な大量のアクセスにも柔軟に対応できる</li>
 <li>EC2はSLAが99.5%(最大月間3.6時間も、サービスが落ちていることを許容する計算になる)しかないが、LambdaはSLAが99.95%(最大でも月間21.6分しかサービスが落ちていることを許容しない計算になる)であるため品質が高い</li>
 </ul>
@@ -357,7 +356,7 @@
 <h2 id="amazon-dynamodb">Amazon DynamoDB</h2>
 <h2 id="amazon-aurora-serverless-v2">Amazon Aurora Serverless v2</h2>
 <p>DynamoDBが使えない領域での第二の選択肢です。
-最小構成で、一切利用が無い場合でも北米リージョンで$43.2、東京リージョンで$72のコストがかかる。(当然ながら、DynamoDBでは保存データ料金を除いて無料である。)</p>
+最小構成で、一切利用が無い場合でも北米リージョンで$43.2、東京リージョンで$72のコストがかかる。(当然ながら、DynamoDBでは一切利用が無い場合は保存データ料金を除いて無料です。)</p>
 <h2 id="amazon-rds">Amazon RDS</h2>
 <h2 id="aws-appsync">AWS AppSync</h2>
 <h2 id="amazon-sqs">Amazon SQS</h2>
@@ -663,7 +662,7 @@ AWS障害のニュースを耳にする機会が増えているが、他人事�
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"利用者が増えても自動でスケールするシステムの開発手法","level":"1.2","depth":1,"next":{"title":"AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法","level":"1.3","depth":1,"path":"markdown/how_to_develop.md","ref":"markdown/how_to_develop.md","articles":[]},"previous":{"title":"よりよいシステム開発の手引き","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/how_to_management_aws_services.md","mtime":"2023-08-28T11:34:48.974Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-08-28T11:36:48.424Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"利用者が増えても自動でスケールするシステムの開発手法","level":"1.2","depth":1,"next":{"title":"AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法","level":"1.3","depth":1,"path":"markdown/how_to_develop.md","ref":"markdown/how_to_develop.md","articles":[]},"previous":{"title":"よりよいシステム開発の手引き","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/how_to_management_aws_services.md","mtime":"2023-08-29T12:53:43.785Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-08-29T12:55:10.599Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
