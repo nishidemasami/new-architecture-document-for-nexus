@@ -1,6 +1,5 @@
 # 利用者が増えても自動でスケールするシステムの開発手法
 
-
 AWSを十分に活用すれば、自動でAWSの以下の恩恵に預かることができます。
 - アクセス数が多くても自動でスケールアウトしてすることができる。
 - アクセス数が少ない場合、自動でスケールインするようにできる。利用がない時は課金額をゼロに近くできる。
@@ -149,6 +148,9 @@ AWSの最も先進的かつ便利なサービスのうちの1つです。
 ***
 
 ## Amazon DynamoDB
+
+DynamoDB を使用した設計とアーキテクチャの設計に関するベストプラクティス - Amazon DynamoDB  
+https://docs.aws.amazon.com/ja_jp/amazondynamodb/latest/developerguide/best-practices.html
 
 ## Amazon Aurora Serverless v2
 
