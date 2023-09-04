@@ -166,14 +166,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" >
+        <li class="chapter " data-level="1.7" data-path="practice.html">
             
-                <span>
+                <a href="practice.html">
             
                     
                     実践
             
-                </span>
+                </a>
             
 
             
@@ -277,7 +277,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="aiによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法">AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法</h1>
-<p>今やAIを駆使してプログラミングをすることは当たり前の時代です。<br>たとえば以下のようなサービスがあります。</p>
+<p>今やAIを駆使してプログラミングをすることは当たり前の時代です。<br>かつて、大人数でやっていたような大規模システムもAIの補助を受けて1人で作れるようになりました。<br>プログラミングAIには以下のようなサービスがあります。</p>
 <ul>
 <li>Amazon CodeWhisperer <a href="https://aws.amazon.com/jp/codewhisperer/" target="_blank">https://aws.amazon.com/jp/codewhisperer/</a></li>
 <li>GitHub Copilot <a href="https://docs.github.com/ja/copilot" target="_blank">https://docs.github.com/ja/copilot</a></li>
@@ -289,7 +289,7 @@
 <blockquote>
 <p>❗FizzBuzzプログラムとは、与えた数字が3の倍数の場合は「Fizz」、5の倍数の場合は「Buzz」、3の倍数かつ5の倍数の場合は「FizzBuzz」、どれでもない場合はその数字を出力するプログラムのことです。</p>
 </blockquote>
-<p>もしあなたが「与えた数字が3の倍数の場合は「Fizz」、5の倍数の場合は「Buzz」、3の倍数かつ5の倍数の場合は「FizzBuzz」、どれでもない場合はその数字を出力するプログラムを書いてください」とだけ言ったら、どんなプログラムが出来上がるでしょうか？バグがあるかもしれません。15と入力すると「FizzBuzzFizzBuzz」と出力されてしまうかもしれません。数字が負の数や少数だったり、2147483647を超えるとエラーが発生してシステムが落ちるかもしれません。大量の文字列を入力するとバッファオーバーフローが発生しPCが乗っ取られるかもしれません。  </p>
+<p>もしあなたが「与えた数字が3の倍数の場合は「Fizz」、5の倍数の場合は「Buzz」、3の倍数かつ5の倍数の場合は「FizzBuzz」、どれでもない場合はその数字を出力するプログラムを書いてください」とだけAIに言ったら、どんなプログラムが出来上がるでしょうか？出来上がったプログラムを見て初めて発覚する仕様の考慮漏れを発見するでしょう。例えば、与えられる数字の最大桁数がわからなければ32bit整数を使えばいいか64bit整数を使えばいいかも定義できません。バグがあるかもしれません。15と入力すると「FizzBuzzFizzBuzz」と出力されてしまうかもしれません。数字が負の数や少数だったり、2147483647を超えるとエラーが発生してシステムが落ちるかもしれません。大量の文字列を入力するとバッファオーバーフローが発生しPCが乗っ取られるかもしれません。  </p>
 <p>一体なにが悪かったのでしょうか？AI？あなたの指示？仕様？？<br>ここでは犯人探しはしません。「正しい」ということを確認できる手法を解説するに留めます。<br>信頼できる熟練の技術者が大勢いて全員が無償で作業してくれる場合には品質担保手法について考える必要は無いかもしれません。しかし、大抵の場合はプログラムの品質をなんらかの形で担保する必要があります。  </p>
 <h2 id="プログラムの品質を担保する手法">プログラムの品質を担保する手法</h2>
 <p>プログラムの品質を担保するには、以下のような手法が存在します。</p>
@@ -414,7 +414,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法","level":"1.3","depth":1,"next":{"title":"生産性が高く修正の追跡が可能な仕様書管理手法","level":"1.4","depth":1,"path":"markdown/how_to_management_documents.md","ref":"markdown/how_to_management_documents.md","articles":[]},"previous":{"title":"利用者が増えても自動でスケールするシステムの開発手法","level":"1.2","depth":1,"path":"markdown/how_to_management_aws_services.md","ref":"markdown/how_to_management_aws_services.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/how_to_develop.md","mtime":"2023-08-29T12:53:43.785Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-08-29T12:55:10.599Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法","level":"1.3","depth":1,"next":{"title":"生産性が高く修正の追跡が可能な仕様書管理手法","level":"1.4","depth":1,"path":"markdown/how_to_management_documents.md","ref":"markdown/how_to_management_documents.md","articles":[]},"previous":{"title":"利用者が増えても自動でスケールするシステムの開発手法","level":"1.2","depth":1,"path":"markdown/how_to_management_aws_services.md","ref":"markdown/how_to_management_aws_services.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/how_to_develop.md","mtime":"2023-09-04T13:16:30.866Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2023-09-04T13:17:58.176Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
