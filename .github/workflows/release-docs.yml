@@ -12,6 +12,7 @@ jobs:
     timeout-minutes: 30
     container:
       image: ghcr.io/nishidemasami/markdown-docs:v1.1.21
+      options: --user runner
 
     steps:
     - name: Checkout
