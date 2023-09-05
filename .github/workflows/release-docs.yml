@@ -10,6 +10,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    container:
+      image: ghcr.io/nishidemasami/markdown-docs:v1.1.16
 
     steps:
     - name: Checkout
@@ -22,12 +24,6 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
-    - name: Install Calibre
-      run: |
-        sudo -v
-        sudo apt-get update -y && sudo apt-get install -y xdg-utils libegl1 libopengl0 fonts-noto graphviz fonts-noto-cjk qtbase5-dev libssl-dev libxcursor-dev libxcomposite-dev libxdamage-dev libxrandr-dev libfontconfig1-dev libxss-dev libwebp-dev libjsoncpp-dev libopus-dev libminizip-dev libavutil-dev libavformat-dev libavcodec-dev libevent-dev libvpx-dev libsnappy-dev libre2-dev libprotobuf-dev protobuf-compiler
-        wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
 
     - name: Build docs
       run: npx honkit build
