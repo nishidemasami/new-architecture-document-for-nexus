@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     container:
-      image: ghcr.io/nishidemasami/markdown-docs:v1.1.21
+      image: ghcr.io/nishidemasami/markdown-docs:v1.1.22
       options: --user runner
 
     steps:
