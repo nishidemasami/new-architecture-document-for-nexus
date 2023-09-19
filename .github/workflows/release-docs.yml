@@ -10,24 +10,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    container:
-      image: ghcr.io/nishidemasami/markdown-docs:v1.1.22
-      options: --user runner
 
     steps:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: "18"
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build docs
-      run: npx honkit build
+    - name: Build docs and Generate PDF
+      run: chmod -R 777 . && docker compose run ghcr.io/nishidemasami/markdown-docs:v1.1.24 /bin/sh -c "npm install && CHROMIUM_FLAGS=--no-sandbox PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable npx honkit build && CHROMIUM_FLAGS=--no-sandbox PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable npx honkit pdf ./ ./architecture-document-for-nexus.pdf"
 
     - name: Push to gh-pages
       uses: peaceiris/actions-gh-pages@v3
@@ -35,9 +24,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: _book/
-
-    - name: Generate PDF
-      run: npx honkit pdf ./ ./new-architecture-document-for-nexus.pdf
 
     - name: Upload PDF
       uses: actions/upload-artifact@v3
