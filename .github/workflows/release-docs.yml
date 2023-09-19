@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Build docs and Generate PDF
-      run: chmod -R 777 . && docker run ghcr.io/nishidemasami/markdown-docs:v1.1.24 /bin/sh -c "npm install && CHROMIUM_FLAGS=--no-sandbox PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable npx honkit build && CHROMIUM_FLAGS=--no-sandbox PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable npx honkit pdf ./ ./architecture-document-for-nexus.pdf"
+      run: chmod -R 777 . && docker run -v .:/honkit ghcr.io/nishidemasami/markdown-docs:v1.1.24 /bin/sh -c "npm install && CHROMIUM_FLAGS=--no-sandbox PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable npx honkit build && CHROMIUM_FLAGS=--no-sandbox PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable npx honkit pdf ./ ./architecture-document-for-nexus.pdf"
 
     - name: Push to gh-pages
       uses: peaceiris/actions-gh-pages@v3
