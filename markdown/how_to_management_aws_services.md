@@ -24,24 +24,24 @@ AWSを十分に活用すれば、自動でAWSの以下の恩恵に預かるこ�
 ```uml
 @startuml
 
-	!define AWSPuml !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist
+	!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v15.0/dist
 	
-	!includeurl ls /AWSPuml/AWSCommon.puml
-	!includeurl AWSPuml/AWSExperimental.puml
-	!includeurl AWSPuml/Groups/all.puml
-	!includeurl AWSPuml/ApplicationIntegration/AppSync.puml
-	!includeurl AWSPuml/Compute/LambdaLambdaFunction.puml
-	!includeurl AWSPuml/Database/DynamoDB.puml
-	!includeurl AWSPuml/General/Documents.puml
-	!includeurl AWSPuml/General/Multimedia.puml
-	!includeurl AWSPuml/General/Tapestorage.puml
-	!includeurl AWSPuml/General/User.puml
-	!includeurl AWSPuml/General/AWSManagementConsole.puml
-	!includeurl AWSPuml/MediaServices/ElementalMediaConvert.puml
-	!includeurl AWSPuml/MachineLearning/Transcribe.puml
-	!includeurl AWSPuml/NetworkingContentDelivery/CloudFront.puml
-	!includeurl AWSPuml/SecurityIdentityCompliance/Cognito.puml
-	!includeurl AWSPuml/Storage/SimpleStorageService.puml
+	!include AWSPuml/AWSCommon.puml
+	!include AWSPuml/AWSExperimental.puml
+	!include AWSPuml/Groups/all.puml
+	!include AWSPuml/ApplicationIntegration/AppSync.puml
+	!include AWSPuml/Compute/LambdaLambdaFunction.puml
+	!include AWSPuml/Database/DynamoDB.puml
+	!include AWSPuml/General/Documents.puml
+	!include AWSPuml/General/Multimedia.puml
+	!include AWSPuml/General/Tapestorage.puml
+	!include AWSPuml/General/User.puml
+	!include AWSPuml/General/AWSManagementConsole.puml
+	!include AWSPuml/MediaServices/ElementalMediaConvert.puml
+	!include AWSPuml/MachineLearning/Transcribe.puml
+	!include AWSPuml/NetworkingContentDelivery/CloudFront.puml
+	!include AWSPuml/SecurityIdentityCompliance/Cognito.puml
+	!include AWSPuml/Storage/SimpleStorageService.puml
 	!includeurl AWSPuml/NetworkingContentDelivery/CloudFront.puml
 	
 	' define custom group for Amazon S3 bucket
