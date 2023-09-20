@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "gitbook-plugin-hide-published-with": "^0.0.1",
+    "gitbook-plugin-mermaid-newface": "^4.1.0",
+    "gitbook-plugin-uml": "^1.2.21",
+    "honkit": "^5.1.0"
+  }
+}
