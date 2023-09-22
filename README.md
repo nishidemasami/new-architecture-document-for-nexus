@@ -17,7 +17,7 @@
 - GitHub Issues https://github.com/nishidemasami/new-architecture-document-for-nexus/issues
 
 Markdownで書かれたドキュメントは、誰もが読みやすいようにHTMLとPDFで公開しています。  
-HTML版はHonkitで生成されGitHub Pagesで公開されており、Markdownが更新されるとGitHub Actionsによって常に最新データに更新されるようになっています。(MermaidやPlantUMLはHTML版だと少し表示が怪しいですが……。)  
+HTML版はHonkitで生成されGitHub Pagesで公開されており、Markdownが更新されるとGitHub Actionsによって常に最新データに更新されるようになっています。(PlantUMLはHTML版だと少し表示が怪しいですが……。)  
 PDF版はCalibreで生成されGitHub Releasesで管理されています。これもHTML版と同様にMarkdownが更新されるとGitHub Actionsによって常に最新データに更新されるようになっています。  
 
 - HTML版 https://nishidemasami.github.io/new-architecture-document-for-nexus/  
@@ -60,8 +60,6 @@ PDF版はCalibreで生成されGitHub Releasesで管理されています。こ�
 この章では、実際にAIによりプログラムを生成し、生産性の高いドキュメント管理をし、AWSを使用して保守性とセキュリティとスケーラビリティの高いシステムを構築します。
 
 * [付録：使用ソフトウェア・ライブラリ・サービス一覧]()
-
-* [付録：Mermaid記法 サンプル集](markdown/appendix/mermaid_samples.md)
 
 * [付録：PlantUML記法 サンプル集](markdown/appendix/plantuml_samples.md)
 

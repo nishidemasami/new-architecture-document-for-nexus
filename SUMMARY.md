@@ -14,8 +14,6 @@
 
 * [付録：使用ソフトウェア・ライブラリ・サービス一覧]()
 
-* [付録：Mermaid記法 サンプル集](markdown/appendix/mermaid_samples.md)
-
 * [付録：PlantUML記法 サンプル集](markdown/appendix/plantuml_samples.md)
 
 * [付録：Markdown記法 サンプル集](markdown/appendix/markdown_samples.md)

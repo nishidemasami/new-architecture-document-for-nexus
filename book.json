@@ -5,7 +5,6 @@
       "-intopic-toc",
       "-sharing",
       "uml",
-      "mermaid-newface",
       "hide-published-with"
     ],
     "pdf" :{
