@@ -24,25 +24,15 @@ AWSを十分に活用すれば、自動でAWSの以下の恩恵に預かるこ�
 ```uml
 @startuml
 
-	!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v15.0/dist
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v16.0/dist
 	
 	!include AWSPuml/AWSCommon.puml
 	!include AWSPuml/AWSExperimental.puml
 	!include AWSPuml/Groups/all.puml
-	!include AWSPuml/ApplicationIntegration/AppSync.puml
-	!include AWSPuml/Compute/LambdaLambdaFunction.puml
-	!include AWSPuml/Database/DynamoDB.puml
-	!include AWSPuml/General/Documents.puml
-	!include AWSPuml/General/Multimedia.puml
-	!include AWSPuml/General/Tapestorage.puml
 	!include AWSPuml/General/User.puml
 	!include AWSPuml/General/AWSManagementConsole.puml
-	!include AWSPuml/MediaServices/ElementalMediaConvert.puml
-	!include AWSPuml/MachineLearning/Transcribe.puml
-	!include AWSPuml/NetworkingContentDelivery/CloudFront.puml
-	!include AWSPuml/SecurityIdentityCompliance/Cognito.puml
 	!include AWSPuml/Storage/SimpleStorageService.puml
-	!includeurl AWSPuml/NetworkingContentDelivery/CloudFront.puml
+	!include AWSPuml/NetworkingContentDelivery/CloudFront.puml
 	
 	' define custom group for Amazon S3 bucket
 	AWSGroupColoring(S3BucketGroup, #FFFFFF, AWS_COLOR_GREEN, plain)
@@ -50,7 +40,46 @@ AWSを十分に活用すれば、自動でAWSの以下の恩恵に預かるこ�
 	
 	' Groups are rectangles with a custom style using stereotype - need to hide
 	hide stereotype
-	skinparam linetype ortho
+	skinparam rectangle {
+		BackgroundColor AWS_BG_COLOR
+		BorderColor transparent
+	}
+	
+	rectangle "$UserIMG()\nユーザー" as user
+	
+	AWSCloudGroup(cloud){
+		RegionGroup(region) {
+	
+			S3BucketGroup(s3) {
+				rectangle "$AWSManagementConsoleIMG()\nWEBサイト" as websites3
+			}
+		}
+	
+		rectangle "$CloudFrontIMG()\nCroudFront\nCDN" as cloudfront
+			cloudfront <-> websites3: <$Callout_2>\l静的ファイル
+			user --> cloudfront: <$Callout_1>\lWEBサイト\n訪問
+	}
+
+@enduml
+```
+
+```uml
+@startuml
+
+	!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v16.0/dist
+	
+	!include AWSPuml/AWSCommon.puml
+	!include AWSPuml/AWSExperimental.puml
+	!include AWSPuml/Groups/all.puml
+	!include AWSPuml/ApplicationIntegration/AppSync.puml
+	!include AWSPuml/Compute/LambdaLambdaFunction.puml
+	!include AWSPuml/Database/DynamoDB.puml
+	!include AWSPuml/General/User.puml
+	!include AWSPuml/NetworkingContentDelivery/CloudFront.puml
+	!include AWSPuml/SecurityIdentityCompliance/Cognito.puml
+	
+	' Groups are rectangles with a custom style using stereotype - need to hide
+	hide stereotype
 	skinparam rectangle {
 		BackgroundColor AWS_BG_COLOR
 		BorderColor transparent
@@ -68,14 +97,7 @@ AWSを十分に活用すれば、自動でAWSの以下の恩恵に預かるこ�
 				lambda <-> Cognito: ユーザー認証管理
 				user <--> Cognito: <$Callout_3>\l認証
 	
-			S3BucketGroup(s3) {
-				rectangle "$AWSManagementConsoleIMG()\nWEBサイト" as websites3
-			}
 		}
-	
-		rectangle "$CloudFrontIMG()\nCroudFront\nCDN" as cloudfront
-			cloudfront <-> websites3: <$Callout_2>\l静的ファイル
-			user --> cloudfront: <$Callout_1>\lWEBサイト\n訪問
 	
 		rectangle "$AppSyncIMG()\nAppSync" as AppSync
 			AppSync <-> Cognito: ユーザー認証管理
