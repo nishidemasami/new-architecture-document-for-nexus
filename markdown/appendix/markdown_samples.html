@@ -190,20 +190,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="mermaid_samples.html">
-            
-                <a href="mermaid_samples.html">
-            
-                    
-                    付録：Mermaid記法 サンプル集
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.10" data-path="plantuml_samples.html">
+        <li class="chapter " data-level="1.9" data-path="plantuml_samples.html">
             
                 <a href="plantuml_samples.html">
             
@@ -216,7 +203,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.11" data-path="markdown_samples.html">
+        <li class="chapter active" data-level="1.10" data-path="markdown_samples.html">
             
                 <a href="markdown_samples.html">
             
@@ -279,12 +266,12 @@
 <p>1個から6個シャープで見出しを記述する。
 ※シャープと見出し文字の間には半角スペースを1つ入れること</p>
 <h3 id="記述例">記述例</h3>
-<pre><code class="lang-md"># 見出し1
-## 見出し2
-### 見出し3
-#### 見出し4
-##### 見出し5
-###### 見出し6
+<pre><code class="lang-md"><span class="hljs-section"># 見出し1</span>
+<span class="hljs-section">## 見出し2</span>
+<span class="hljs-section">### 見出し3</span>
+<span class="hljs-section">#### 見出し4</span>
+<span class="hljs-section">##### 見出し5</span>
+<span class="hljs-section">###### 見出し6</span>
 </code></pre>
 <h3 id="表示例">表示例</h3>
 <h1 id="見出し1">見出し1</h1>
@@ -297,13 +284,13 @@
 <p>ハイフン、プラス、アスタリスクのいずれかで箇条書きリストを記述可能。
 ※ハイフン、プラス、アスタリスクと箇条書きの項目の間には半角スペースを1つ入れること</p>
 <h3 id="記述例">記述例</h3>
-<pre><code class="lang-md">- リスト1
-    - ネスト リスト1_1
-        - ネスト リスト1_1_1
-        - ネスト リスト1_1_2
-    - ネスト リスト1_2
-- リスト2
-- リスト3
+<pre><code class="lang-md"><span class="hljs-bullet">-</span> リスト1
+<span class="hljs-bullet">    -</span> ネスト リスト1<span class="hljs-emphasis">_1
+        - ネスト リスト1_</span>1<span class="hljs-emphasis">_1
+        - ネスト リスト1_</span>1<span class="hljs-emphasis">_2
+    - ネスト リスト1_</span>2
+<span class="hljs-bullet">-</span> リスト2
+<span class="hljs-bullet">-</span> リスト3
 </code></pre>
 <h3 id="表示例">表示例</h3>
 <ul>
@@ -325,11 +312,11 @@
 そのため、一般的にはすべて <code>1. 内容</code> で記載すると変更に強く楽です。
 ※数値+半角ドットと箇条書きの項目の間には半角スペースを1つ入れること</p>
 <h3 id="記述例">記述例</h3>
-<pre><code class="lang-md">1. 番号付きリスト1
-    1. 番号付きリスト1_1
-    1. 番号付きリスト1_2
-1. 番号付きリスト2
-1. 番号付きリスト3
+<pre><code class="lang-md"><span class="hljs-bullet">1.</span> 番号付きリスト1
+<span class="hljs-bullet">    1.</span> 番号付きリスト1<span class="hljs-emphasis">_1
+    1. 番号付きリスト1_</span>2
+<span class="hljs-bullet">1.</span> 番号付きリスト2
+<span class="hljs-bullet">1.</span> 番号付きリスト3
 </code></pre>
 <h3 id="表示例">表示例</h3>
 <ol>
@@ -342,9 +329,9 @@
 <li>番号付きリスト3</li>
 </ol>
 <h2 id="引用">引用</h2>
-<pre><code class="lang-md">&gt; お世話になります。xxxです。
-&gt; 
-&gt; ご連絡いただいた、バグの件ですが、仕様です。
+<pre><code class="lang-md"><span class="hljs-quote">&gt; お世話になります。xxxです。</span>
+<span class="hljs-quote">&gt; 
+&gt; ご連絡いただいた、バグの件ですが、仕様です。</span>
 </code></pre>
 <h3 id="表示例">表示例</h3>
 <blockquote>
@@ -353,9 +340,9 @@
 </blockquote>
 <h2 id="二重引用">二重引用</h2>
 <h3 id="記述例">記述例</h3>
-<pre><code class="lang-md">&gt; お世話になります。xxxです。
-&gt; 
-&gt; ご連絡いただいた、バグの件ですが、仕様です。
+<pre><code class="lang-md"><span class="hljs-quote">&gt; お世話になります。xxxです。</span>
+<span class="hljs-quote">&gt; 
+&gt; ご連絡いただいた、バグの件ですが、仕様です。</span>
 &gt;&gt; お世話になります。 yyyです。
 &gt;&gt; 
 &gt;&gt; あの新機能バグってるっすね
@@ -372,7 +359,7 @@
 <h2 id="code記法">code記法</h2>
 <p>バッククォートで文字列を囲むことでコードの一部を表示可能です。</p>
 <h3 id="記述例">記述例</h3>
-<pre><code class="lang-md">インストールコマンドは `gem install hoge` です
+<pre><code class="lang-md">インストールコマンドは <span class="hljs-code">`gem install hoge`</span> です
 </code></pre>
 <h3 id="表示例">表示例</h3>
 <p>インストールコマンドは <code>gem install hoge</code> です</p>
@@ -380,8 +367,8 @@
 <p>アスタリスクもしくはアンダースコア1個で文字列を囲むことで強調します。
 見た目は斜体になります。</p>
 <h3 id="記述例">記述例</h3>
-<pre><code class="lang-md">normal *italic* normal
-normal _italic_ normal
+<pre><code class="lang-md">normal <span class="hljs-emphasis">*italic*</span> normal
+normal <span class="hljs-emphasis">_italic_</span> normal
 </code></pre>
 <h3 id="表示例">表示例</h3>
 <p>normal <em>italic</em> normal
@@ -390,8 +377,8 @@ normal <em>italic</em> normal</p>
 <p>アスタリスクもしくはアンダースコア2個で文字列を囲むことで強調にします。
 見た目は太字になります。</p>
 <h3 id="記述例">記述例</h3>
-<pre><code class="lang-md">normal **bold** normal
-normal __bold__ normal
+<pre><code class="lang-md">normal <span class="hljs-strong">**bold**</span> normal
+normal <span class="hljs-strong">__bold__</span> normal
 </code></pre>
 <h3 id="表示例">表示例</h3>
 <p>normal <strong>bold</strong> normal
@@ -400,8 +387,8 @@ normal <strong>bold</strong> normal</p>
 <p>アスタリスクもしくはアンダースコア3個で文字列を囲むことで &lt;em&gt; と &lt;strong&gt; による強調を両方適用します。
 見た目は斜体かつ太字になります。</p>
 <h3 id="記述例">記述例</h3>
-<pre><code class="lang-md">normal ***bold*** normal
-normal ___bold___ normal
+<pre><code class="lang-md">normal <span class="hljs-strong">**<span class="hljs-emphasis">*bold*</span>**</span> normal
+normal <span class="hljs-strong">__<span class="hljs-emphasis">_bold_</span>__</span> normal
 </code></pre>
 <h3 id="表示例">表示例</h3>
 <p>normal <strong><em>bold</em></strong> normal
@@ -411,14 +398,14 @@ normal <strong><em>bold</em></strong> normal</p>
 ※連続するハイフンなどの間にはスペースがあっても良い</p>
 <h3 id="記述例">記述例</h3>
 <pre><code class="lang-markdown">
-***
+<span class="hljs-strong">***
 
 ___
 
 ---
 
 *    *    *
-</code></pre>
+</span></code></pre>
 <h3 id="表示例">表示例</h3>
 <hr>
 <hr>
@@ -426,17 +413,17 @@ ___
 <hr>
 <h2 id="リンク">リンク</h2>
 <p><code>[表示文字](リンクURL)</code>形式でリンクを記述できます</p>
-<pre><code class="lang-md">[Google先生](https://www.google.co.jp/)
+<pre><code class="lang-md">[<span class="hljs-string">Google先生</span>](<span class="hljs-link">https://www.google.co.jp/</span>)
 </code></pre>
 <p><a href="https://www.google.co.jp/" target="_blank">Google先生</a></p>
 <h2 id="定義参照リンク">定義参照リンク</h2>
 <p>Markdownの文書の途中に長いリンクを記述したくない場合は、
 同じリンクの参照を何度も利用する場合は、リンク先への参照を定義することができます。</p>
-<pre><code class="lang-markdown">[こっちからgoogle][google]
+<pre><code class="lang-markdown">[<span class="hljs-string">こっちからgoogle</span>][<span class="hljs-symbol">google</span>]
 その他の文章
-[こっちからもgoogle][google]
+[<span class="hljs-string">こっちからもgoogle</span>][<span class="hljs-symbol">google</span>]
 
-[google]: https://www.google.co.jp/
+[<span class="hljs-symbol">google</span>]: <span class="hljs-link">https://www.google.co.jp/</span>
 </code></pre>
 <p><a href="https://www.google.co.jp/" target="_blank">こっちからgoogle</a>
 その他の文章
@@ -460,13 +447,13 @@ ___
 <p><del>取り消し線</del></p>
 <h2 id="gfmpre記法チルダ×3">GFM:pre記法(チルダ×3)</h2>
 <h3 id="記述例">記述例</h3>
-<pre><code class="lang-md">　~~~
+<pre><code class="lang-md">　<span class="hljs-code">~~~
 　class Hoge
 　  def hoge
 　    print &apos;hoge&apos;
 　  end
 　end
-　~~~
+　~~~</span>
 </code></pre>
 <h3 id="表示例">表示例</h3>
 <pre><code>class Hoge
@@ -476,13 +463,13 @@ ___
 end
 </code></pre><h2 id="gfmpre記法バッククォート×3">GFM:pre記法(バッククォート×3)</h2>
 <h3 id="記述例">記述例</h3>
-<pre><code class="lang-md">　```
+<pre><code class="lang-md">　<span class="hljs-code">```
 　class Hoge
 　  def hoge
 　    print &apos;hoge&apos;
 　  end
 　end
-　```
+　```</span>
 </code></pre>
 <h3 id="表示例">表示例</h3>
 <pre><code>class Hoge
@@ -560,7 +547,7 @@ end
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"付録：Markdown記法 サンプル集","level":"1.11","depth":1,"previous":{"title":"付録：PlantUML記法 サンプル集","level":"1.10","depth":1,"path":"markdown/appendix/plantuml_samples.md","ref":"markdown/appendix/plantuml_samples.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/appendix/markdown_samples.md","mtime":"2023-09-20T23:56:33.779Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-09-20T23:58:06.250Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"付録：Markdown記法 サンプル集","level":"1.10","depth":1,"previous":{"title":"付録：PlantUML記法 サンプル集","level":"1.9","depth":1,"path":"markdown/appendix/plantuml_samples.md","ref":"markdown/appendix/plantuml_samples.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/appendix/markdown_samples.md","mtime":"2023-09-22T07:42:20.674Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-09-22T07:43:29.058Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

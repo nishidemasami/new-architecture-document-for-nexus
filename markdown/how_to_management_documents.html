@@ -192,20 +192,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="appendix/mermaid_samples.html">
-            
-                <a href="appendix/mermaid_samples.html">
-            
-                    
-                    付録：Mermaid記法 サンプル集
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.10" data-path="appendix/plantuml_samples.html">
+        <li class="chapter " data-level="1.9" data-path="appendix/plantuml_samples.html">
             
                 <a href="appendix/plantuml_samples.html">
             
@@ -218,7 +205,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="appendix/markdown_samples.html">
+        <li class="chapter " data-level="1.10" data-path="appendix/markdown_samples.html">
             
                 <a href="appendix/markdown_samples.html">
             
@@ -279,7 +266,7 @@
                                 <h1 id="生産性が高く修正の追跡が可能な仕様書管理手法">生産性が高く修正の追跡が可能な仕様書管理手法</h1>
 <p>ドキュメント管理システムは現在のシステム開発においては、よほど特殊な事情（経営者が自社の倒産を望んでいる、競合他社がプロジェクトを失敗させるためにプロジェクトマネージャを買収した、など）がない限りは必ず使用されます。<br>そのためのドキュメント管理のためツールも様々な種類があります。<br>しかし、これらも正しく使わなければなんの意味もありません。ドキュメントを管理する勘どころは以下の通りです。</p>
 <ul>
-<li>エクセルやワードなどを使わない<br>エクセルやワードでは変更を完全に追跡することができず、仕様が誰かによってこっそり修正・変更され、関係者が変更に気付けない事態が発生します。プロジェクトの失敗を望むのでない限り、絶対にエクセルやワードで仕様書など管理してはいけません。文書にはMarkdownを使用し、図の作成にはPlantUMLおよびMermaidを使用し、空白1つや矢印の向き1つでさえ完全に管理できるようにします。</li>
+<li>エクセルやワードなどを使わない<br>エクセルやワードでは変更を完全に追跡することができず、仕様が誰かによってこっそり修正・変更され、関係者が変更に気付けない事態が発生します。プロジェクトの失敗を望むのでない限り、絶対にエクセルやワードで仕様書など管理してはいけません。文書にはMarkdownを使用し、図の作成にはPlantUMLを使用し、空白1つや矢印の向き1つでさえ完全に管理できるようにします。</li>
 <li>変更は認証されたユーザのみが修正することができ、ドキュメントの修正タスクは管理され、変更は常に関係者に通知・横展開されるようにする<br>誰に変更されたかわからないドキュメント管理や、仕様書が修正されたことが関係者に通知されないドキュメント管理は、プロジェクトマネージャが疲弊するばかりです。</li>
 <li>プログラムやIDLから定義書が自動的に生成され、変更が継続的に反映されるようにする<br>管理されなくなったドキュメントは混乱を招くだけですが、手動でドキュメントを管理するのは時間と労力の無駄です。現代のグローバル社会でそんなシステム開発をしていたら、コスト面の不利によってあっという間に競合他社に遅れを取るでしょう。</li>
 </ul>
@@ -291,7 +278,6 @@
 <h4 id="git">Git</h4>
 <h4 id="markdown">Markdown</h4>
 <h4 id="plantuml">PlantUML</h4>
-<h4 id="mermaid">Mermaid</h4>
 
                                 
                                 </section>
@@ -335,7 +321,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"生産性が高く修正の追跡が可能な仕様書管理手法","level":"1.4","depth":1,"next":{"title":"現代的な要件定義の手法","level":"1.5","depth":1,"path":"markdown/how_to_define_requirements.md","ref":"markdown/how_to_define_requirements.md","articles":[]},"previous":{"title":"AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法","level":"1.3","depth":1,"path":"markdown/how_to_develop.md","ref":"markdown/how_to_develop.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","mermaid-newface","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"mermaid-newface":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/how_to_management_documents.md","mtime":"2023-09-20T23:56:33.779Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-09-20T23:58:06.250Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"生産性が高く修正の追跡が可能な仕様書管理手法","level":"1.4","depth":1,"next":{"title":"現代的な要件定義の手法","level":"1.5","depth":1,"path":"markdown/how_to_define_requirements.md","ref":"markdown/how_to_define_requirements.md","articles":[]},"previous":{"title":"AIによるプログラム生成（またはフリーランス・オフショア・未熟なプログラマーなど）により開発されたプログラムの品質を担保する手法","level":"1.3","depth":1,"path":"markdown/how_to_develop.md","ref":"markdown/how_to_develop.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-intopic-toc","-sharing","uml","hide-published-with"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"uml":{"format":"svg","charset":"utf8","config":"classic","nailgun":false},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":40,"left":40,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"uml":{"charset":"UTF-8"},"variables":{},"language":"ja","gitbook":"*","publisher":""},"file":{"path":"markdown/how_to_management_documents.md","mtime":"2023-09-22T07:42:20.674Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-09-22T07:43:29.058Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
