@@ -6,6 +6,7 @@ node_modules
 package-lock.json
 .idea
 .swp
+*.pdf
 example_en.pdf
 example_ja.pdf
 .mermaid_*

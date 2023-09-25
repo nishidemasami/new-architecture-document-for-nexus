@@ -4,8 +4,7 @@
     "plugins": [
       "-intopic-toc",
       "-sharing",
-      "uml",
-      "hide-published-with"
+      "uml"
     ],
     "pdf" :{
       "pageNumbers": false,
@@ -17,5 +16,8 @@
     "uml": {
       "charset" : "UTF-8"
     },
-    "language": "ja"
+    "language": "ja",
+    "styles": {
+        "website": "override_style.css"
+    }
 }
